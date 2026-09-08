@@ -16,7 +16,7 @@ public class UIAnimations : MonoBehaviour
     public void FadeIn(CanvasGroup cg, float duration, bool fade, Action OnFadeFinished = null)
     {
         if (_currentCoroutine == null)
-            _currentCoroutine = StartCoroutine(Fade(cg, duration, fade));
+            _currentCoroutine = StartCoroutine(Fade(cg, duration, fade, OnFadeFinished));
     }
 
     private IEnumerator Fade(CanvasGroup cg, float duration, bool fade, Action OnFadeFinished = null)
