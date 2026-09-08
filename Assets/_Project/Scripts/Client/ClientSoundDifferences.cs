@@ -33,7 +33,7 @@ public class ClientSoundDifferences : MonoBehaviour
             (AudioClip clipToPlay, float delayAfter) = _isAnomaly ? _soundDiffSO.PickRandomIncorrectSound() : _soundDiffSO.PickRandomCorrectSound();
             _soundSource.clip = clipToPlay;
             _soundSource.Play();
-            yield return new WaitForSeconds(delayAfter);
+            yield return new WaitForSeconds(_soundSource.clip.length + delayAfter);
         }
     }
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TestSoundDiff
   m_EditorClassIdentifier: Assembly-CSharp::SoundDifferencesSO
   _correctSoundToDiff:
-  - Sound: {fileID: 8300000, guid: 24a2acad7b615bb4dbf137739811b2d7, type: 3}
+  - Sound: {fileID: 8300000, guid: d74cce2f1d90e754fb5d8fd3eaa02816, type: 3}
     DiffBetweenSound: 1
   _incorrectsoundToDiff:
-  - Sound: {fileID: 8300000, guid: 54e47415aa0210a4cafb31dcb89f85f1, type: 3}
+  - Sound: {fileID: 8300000, guid: 6392d833c6a7b6f4eb3d9fe60302ab05, type: 3}
     DiffBetweenSound: 1
