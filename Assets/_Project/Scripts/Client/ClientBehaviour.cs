@@ -5,6 +5,7 @@ public class ClientBehaviour : MonoBehaviour
 {
     [Header("Anomalies")]
     [SerializeField] private ClientVisualAnomalies _visualAnomalies;
+    [SerializeField] private ClientSoundDifferences _soundAnomalies;
 
     private bool _isVisualAnomaly;
     private bool _isSoundAnomaly;
@@ -22,5 +23,6 @@ public class ClientBehaviour : MonoBehaviour
         _isDialogAnomaly = RandomExtensions.RandomBool();
 
         _visualAnomalies.SetupSprite(_isVisualAnomaly);
+        _soundAnomalies.TriggerSoundEffect(_isSoundAnomaly);
     }
 }
