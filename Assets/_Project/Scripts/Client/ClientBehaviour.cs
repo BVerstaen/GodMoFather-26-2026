@@ -1,5 +1,6 @@
 using UnityEngine;
 using PLIbox.Extensions;
+using System.Collections.Generic;
 
 public class ClientBehaviour : MonoBehaviour
 {
@@ -7,22 +8,22 @@ public class ClientBehaviour : MonoBehaviour
     [SerializeField] private ClientVisualAnomalies _visualAnomalies;
     [SerializeField] private ClientSoundDifferences _soundAnomalies;
 
-    private bool _isVisualAnomaly;
-    private bool _isSoundAnomaly;
-    private bool _isDialogAnomaly;
+    [Space(5)]
+    [SerializeField] private List<FakeClientSO> _fakeClientList;
+
+    private FakeClientSO _fakeClient;
 
     public bool IsAnomaly
     {
-        get => _isVisualAnomaly || _isSoundAnomaly || _isDialogAnomaly;
+        get;
+        private set;
     }
 
     private void Awake()
     {
-        _isVisualAnomaly = RandomExtensions.RandomBool();
-        _isSoundAnomaly = RandomExtensions.RandomBool();
-        _isDialogAnomaly = RandomExtensions.RandomBool();
+        IsAnomaly = RandomExtensions.RandomBool();
 
-        _visualAnomalies.SetupSprite(_isVisualAnomaly);
-        _soundAnomalies.TriggerSoundEffect(_isSoundAnomaly);
+        _visualAnomalies.SetupSprite(_fakeClient ? _fakeClient.InvalidVisual : null);
+        _soundAnomalies.TriggerSoundEffect(_fakeClient ? _fakeClient.InvalidSound : null);
     }
 }

@@ -8,7 +8,7 @@ public class ClientVisualAnomalies : MonoBehaviour
     [SerializeField] private SpriteRenderer _sprite;
 
     [Header("Sprites")]
-    [SerializeField] private VisualDifferencesSO _visualDiff;
+    [SerializeField] private VisualDifferencesSO _visualList;
 
-    public void SetupSprite(bool isAnomaly) => _sprite.sprite = isAnomaly ? _visualDiff.AnomaliesSprite.GetRandomItem() : _visualDiff.CorrectSprite;
+    public void SetupSprite(Sprite invalidSprite) => _sprite.sprite = invalidSprite ? invalidSprite : _visualList.AnomaliesSprite.GetRandomItem();
 }

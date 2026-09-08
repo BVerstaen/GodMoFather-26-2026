@@ -6,24 +6,16 @@ using PLIbox.Extensions;
 public class SoundDifferencesSO : ScriptableObject
 {
     [System.Serializable]
-    private struct SoundDiff
+    public struct SoundDiff
     {
         public AudioClip Sound;
         public float DiffBetweenSound;
     }
 
-    [SerializeField] private List<SoundDiff> _correctSoundToDiff;
-    [SerializeField] private List<SoundDiff> _incorrectsoundToDiff;
+    [SerializeField] private List<SoundDiff> _soundList;
 
-    public (AudioClip, float) PickRandomCorrectSound()
+    public SoundDiff PickRandomSoundData()
     {
-        SoundDiff randomStruct = _correctSoundToDiff.GetRandomItem();
-        return (randomStruct.Sound, randomStruct.DiffBetweenSound);
-    }
-
-    public (AudioClip, float) PickRandomIncorrectSound()
-    {
-        SoundDiff randomStruct = _incorrectsoundToDiff.GetRandomItem();
-        return (randomStruct.Sound, randomStruct.DiffBetweenSound);
+        return _soundList.GetRandomItem();
     }
 }
