@@ -1,6 +1,6 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml;
 using TMPro;
 using UnityEngine;
 
@@ -8,20 +8,41 @@ public class DialogueController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private float LetterGapTime;
+    [SerializeField] private CanvasGroup dialogueCG;
+    [SerializeField] private float DialoguePanelFadeDuration;
     [SerializeField] private List<string> TestDialogue = new List<string>(); // test
 
-    private Coroutine _currentCoroutine;
+    private Coroutine _currentCoroutine = null;
     private int _currentLineIndex;
     private List<string> _currentDialogue = new List<string>();
+
+    private Action OnPanelFaded;
+
+    private void Awake()
+    {
+        OnPanelFaded += Display;
+    }
+
+    private void OnDestroy()
+    {
+        OnPanelFaded -= Display;
+    }
 
     public void LaunchDialogue()
     {
         _currentDialogue = TestDialogue; // pour l'instant test sans data
+        dialogueText.text = "";
 
         // aller chercher le dialogue du current perso
 
         _currentLineIndex = 0;
 
+        UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, true, OnPanelFaded);
+    }
+
+    private void Display()
+    {
+        Debug.Log("display");
         _currentCoroutine = StartCoroutine(DisplayLine(_currentDialogue[_currentLineIndex]));
     }
 
@@ -36,7 +57,7 @@ public class DialogueController : MonoBehaviour
         else
         {
             _currentLineIndex++;
-            _currentCoroutine = StartCoroutine(DisplayLine(_currentDialogue[_currentLineIndex]));
+            Display();
         }
 
     }
