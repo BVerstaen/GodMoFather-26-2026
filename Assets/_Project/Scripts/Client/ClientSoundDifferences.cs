@@ -1,14 +1,24 @@
+using PLIbox.Extensions;
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClientSoundDifferences : MonoBehaviour
 {
+    [System.Serializable]
+    public struct SoundDiff
+    {
+        public AudioClip Sound;
+        public float DiffBetweenSound;
+    }
+
     [Header("References")]
     [SerializeField] private AudioSource _soundSource;
     [Space(5)]
-    [SerializeField] private SoundDifferencesSO _soundDiffSO;
+    [SerializeField] private List<SoundDiff> _soundDataList;
 
-    private SoundDifferencesSO.SoundDiff _soundData;
+    private SoundDiff _soundData;
     private Coroutine _soundPlayCoroutine;
 
     private void OnDisable()
@@ -20,9 +30,14 @@ public class ClientSoundDifferences : MonoBehaviour
         }
     }
 
-    public void TriggerSoundEffect(SoundDifferencesSO.SoundDiff? InvalidSoundDiff)
+    public void TriggerSoundEffect()
     {
-        _soundData = InvalidSoundDiff.HasValue ? InvalidSoundDiff.Value : _soundDiffSO.PickRandomSoundData();
+        _soundData = _soundDataList.GetRandomItem();
+        _soundPlayCoroutine = StartCoroutine(SoundPlayRoutine());
+    }
+    public void TriggerSoundEffect(SoundDiff InvalidSoundDiff)
+    {
+        _soundData = InvalidSoundDiff;
         _soundPlayCoroutine = StartCoroutine(SoundPlayRoutine());
     }
 

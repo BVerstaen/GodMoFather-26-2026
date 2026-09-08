@@ -4,5 +4,5 @@ using UnityEngine;
 public class FakeClientSO : ScriptableObject
 {
     public Sprite InvalidVisual;
-    public SoundDifferencesSO.SoundDiff InvalidSound;
+    public ClientSoundDifferences.SoundDiff InvalidSound;
 }

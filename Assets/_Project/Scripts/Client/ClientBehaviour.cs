@@ -11,9 +11,9 @@ public class ClientBehaviour : MonoBehaviour
     [Space(5)]
     [SerializeField] private List<FakeClientSO> _fakeClientList;
 
-    private FakeClientSO _fakeClient;
+    private FakeClientSO _fakeClient = null;
 
-    public bool IsAnomaly
+    public bool IsFakeClient
     {
         get;
         private set;
@@ -21,9 +21,15 @@ public class ClientBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        IsAnomaly = RandomExtensions.RandomBool();
+        //Choose if is fake or not
+        IsFakeClient = RandomExtensions.RandomBool();
+        if (IsFakeClient)
+            _fakeClient = _fakeClientList.GetRandomItem();
 
         _visualAnomalies.SetupSprite(_fakeClient ? _fakeClient.InvalidVisual : null);
-        _soundAnomalies.TriggerSoundEffect(_fakeClient ? _fakeClient.InvalidSound : null);
+        if (_fakeClient != null && _fakeClient.InvalidSound.Sound != null)
+            _soundAnomalies.TriggerSoundEffect(_fakeClient.InvalidSound);
+        else
+            _soundAnomalies.TriggerSoundEffect();
     }
 }
