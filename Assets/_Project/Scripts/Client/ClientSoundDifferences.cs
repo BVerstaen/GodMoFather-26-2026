@@ -1,39 +1,53 @@
+using PLIbox.Extensions;
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClientSoundDifferences : MonoBehaviour
 {
+    [System.Serializable]
+    public struct SoundDiff
+    {
+        public AudioClip Sound;
+        public float DiffBetweenSound;
+    }
+
     [Header("References")]
     [SerializeField] private AudioSource _soundSource;
     [Space(5)]
-    [SerializeField] private SoundDifferencesSO _soundDiffSO;
+    [SerializeField] private List<SoundDiff> _soundDataList;
 
-    private bool _isAnomaly;
+    private SoundDiff _soundData;
     private Coroutine _soundPlayCoroutine;
 
     private void OnDisable()
     {
-        if(_soundPlayCoroutine != null)
+        if (_soundPlayCoroutine != null)
         {
             StopCoroutine(_soundPlayCoroutine);
             _soundPlayCoroutine = null;
         }
     }
 
-    public void TriggerSoundEffect(bool isAnomaly)
+    public void TriggerSoundEffect()
     {
-        _isAnomaly = isAnomaly;
+        _soundData = _soundDataList.GetRandomItem();
+        _soundPlayCoroutine = StartCoroutine(SoundPlayRoutine());
+    }
+    public void TriggerSoundEffect(SoundDiff InvalidSoundDiff)
+    {
+        _soundData = InvalidSoundDiff;
         _soundPlayCoroutine = StartCoroutine(SoundPlayRoutine());
     }
 
     private IEnumerator SoundPlayRoutine()
     {
-        while(true)
+        _soundSource.clip = _soundData.Sound;
+        while (true)
         {
-            (AudioClip clipToPlay, float delayAfter) = _isAnomaly ? _soundDiffSO.PickRandomIncorrectSound() : _soundDiffSO.PickRandomCorrectSound();
-            _soundSource.clip = clipToPlay;
             _soundSource.Play();
-            yield return new WaitForSeconds(_soundSource.clip.length + delayAfter);
+            yield return new WaitForSeconds(_soundSource.clip.length + _soundData.DiffBetweenSound);
         }
     }
 }

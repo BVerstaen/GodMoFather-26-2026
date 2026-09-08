@@ -1,5 +1,6 @@
 using UnityEngine;
 using PLIbox.Extensions;
+using System.Collections.Generic;
 
 public class ClientBehaviour : MonoBehaviour
 {
@@ -7,22 +8,28 @@ public class ClientBehaviour : MonoBehaviour
     [SerializeField] private ClientVisualAnomalies _visualAnomalies;
     [SerializeField] private ClientSoundDifferences _soundAnomalies;
 
-    private bool _isVisualAnomaly;
-    private bool _isSoundAnomaly;
-    private bool _isDialogAnomaly;
+    [Space(5)]
+    [SerializeField] private List<FakeClientSO> _fakeClientList;
 
-    public bool IsAnomaly
+    private FakeClientSO _fakeClient = null;
+
+    public bool IsFakeClient
     {
-        get => _isVisualAnomaly || _isSoundAnomaly || _isDialogAnomaly;
+        get;
+        private set;
     }
 
     private void Awake()
     {
-        _isVisualAnomaly = RandomExtensions.RandomBool();
-        _isSoundAnomaly = RandomExtensions.RandomBool();
-        _isDialogAnomaly = RandomExtensions.RandomBool();
+        //Choose if is fake or not
+        IsFakeClient = RandomExtensions.RandomBool();
+        if (IsFakeClient)
+            _fakeClient = _fakeClientList.GetRandomItem();
 
-        _visualAnomalies.SetupSprite(_isVisualAnomaly);
-        _soundAnomalies.TriggerSoundEffect(_isSoundAnomaly);
+        _visualAnomalies.SetupSprite(_fakeClient ? _fakeClient.InvalidVisual : null);
+        if (_fakeClient != null && _fakeClient.InvalidSound.Sound != null)
+            _soundAnomalies.TriggerSoundEffect(_fakeClient.InvalidSound);
+        else
+            _soundAnomalies.TriggerSoundEffect();
     }
 }
