@@ -1166,6 +1166,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad818a3beb3f0347bee131a75f9e548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostInteractionInput
+  _ghostInteractions:
+  - key: {fileID: 8427692767903632302, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
+  - key: {fileID: -8689976115517596489, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
+  - key: {fileID: 6465298882502159570, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
+  - key: {fileID: 4906714756674966492, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
+  - key: {fileID: 7441773544815523985, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
+  - key: {fileID: 8401225677674450055, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
+  - key: {fileID: 8443302251315735863, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
+  - key: {fileID: 212295072805798116, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 0}
   _ghostInteraction_0: {fileID: 8427692767903632302, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
   _ghostInteraction_1: {fileID: -8689976115517596489, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
   _ghostInteraction_2: {fileID: 6465298882502159570, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
