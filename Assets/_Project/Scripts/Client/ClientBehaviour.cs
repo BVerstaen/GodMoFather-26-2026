@@ -43,8 +43,6 @@ public class ClientBehaviour : MonoBehaviour
         Camera cam = Camera.main;
         float height = cam.orthographicSize;
         _gameWidth = height * cam.aspect;
-
-        TriggerClientDialog();
     }
 
     public void OnMouseDown()
@@ -62,7 +60,10 @@ public class ClientBehaviour : MonoBehaviour
     private IEnumerator MoveClient(bool IsEntry)
     {
         if (ClientPlacementPoint.Instance == null)
+        {
+            EndAnimation();
             yield break;
+        }
 
         Transform ClientTargetPoint = ClientPlacementPoint.Instance.transform;
 
@@ -85,10 +86,14 @@ public class ClientBehaviour : MonoBehaviour
 
             yield return null;
         }
+        EndAnimation();
 
-        if (!IsEntry)
-            Destroy(gameObject);
+        void EndAnimation()
+        {
+            if (!IsEntry)
+                Destroy(gameObject);
+            else
+                TriggerClientDialog();
+        }
     }
-
-        
 }
