@@ -59,14 +59,18 @@ public class ClientDialog : MonoBehaviour
 
     private void ToggleAnimation((bool isWriting, float timeGap) data)
     {
+        if (_dialogAnimation != null)
+        {
+            StopCoroutine(_dialogAnimation);
+            _dialogAnimation = null;
+        }
+
         if (!data.isWriting)
         {
             _graphicsSprite.localScale = _baseGraphicsScale;
-            if(_dialogAnimation != null)
-                StopCoroutine(_dialogAnimation);
-            _dialogAnimation = null;
             return;
         }
+
         _dialogAnimation = StartCoroutine(DialogAnimation(data.timeGap));
     }
 
