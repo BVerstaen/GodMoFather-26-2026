@@ -46,11 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientSoundDifferences
   _soundSource: {fileID: 5364404208127415057}
-  _soundDataList:
-  - Sound: {fileID: 8300000, guid: d74cce2f1d90e754fb5d8fd3eaa02816, type: 3}
-    DiffBetweenSound: 0
-  - Sound: {fileID: 8300000, guid: 6392d833c6a7b6f4eb3d9fe60302ab05, type: 3}
-    DiffBetweenSound: 0
+  _soundDataList: []
 --- !u!82 &5364404208127415057
 AudioSource:
   m_ObjectHideFlags: 0
