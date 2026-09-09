@@ -749,7 +749,7 @@ MonoBehaviour:
   _canvasGroup: {fileID: 432959844}
   _duration: 1
   _timeBeforeMenu: 1
-  _menuScene: SampleScene
+  _menuScene: MainMenu
 --- !u!1 &663349036
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,12 +20,13 @@ public class EndScrenUI : MonoBehaviour
     public void ShowEndScreen()
     {
         _canvasGroup.interactable = false;
-        UIAnimations.Instance.FadeIn(_canvasGroup, _duration, true, _onEndScreenFaded);
         _onEndScreenFaded += StartWaitMainMenu;
+        UIAnimations.Instance.FadeIn(_canvasGroup, _duration, true, _onEndScreenFaded);
     }
 
     private void StartWaitMainMenu()
     {
+        print("Start waiting");
         _onEndScreenFaded -= StartWaitMainMenu;
         _canvasGroup.interactable = true;
         _waitCoroutine = StartCoroutine(WaitForMainMenu());
