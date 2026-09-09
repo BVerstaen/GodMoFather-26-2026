@@ -296,6 +296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientDialog
   _validDialogs: []
+  _graphicsSprite: {fileID: 6554244259265893666}
+  _minYScale: 0.7
 --- !u!1 &7589658540997800083
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,8 @@ public class DialogueController : MonoBehaviour
 
     private Action OnPanelFaded;
 
+    public Action<(bool isWriting, float timeGap)> OnDialogWriting;
+
     private void Awake()
     {
         if (Instance != null)
@@ -90,13 +92,14 @@ public class DialogueController : MonoBehaviour
     private IEnumerator DisplayLine(string line)
     {
         string newLine = "";
-
-        foreach(char c in line)
+        OnDialogWriting?.Invoke((true, LetterGapTime));
+        foreach (char c in line)
         {
             yield return new WaitForSeconds(LetterGapTime);
             newLine += c;
             dialogueText.text = newLine;
         }
+        OnDialogWriting?.Invoke((false, LetterGapTime));
         _currentCoroutine = null;
     }
 
