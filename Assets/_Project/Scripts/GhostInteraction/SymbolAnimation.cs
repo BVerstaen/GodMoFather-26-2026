@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class SymbolAnimation : MonoBehaviour
 {
     [SerializeField] private Image _symbolIMG;
+    [SerializeField] private AudioClip _symbolAudio;
+    [SerializeField] private AudioSource _audioSource;
+
     [SerializeField] private Vector2 _XGap;
     [SerializeField] private Vector2 _YGap;
     [SerializeField] private float _animDuration;
@@ -12,7 +15,7 @@ public class SymbolAnimation : MonoBehaviour
     public void Init(Sprite symbol)
     {
         _symbolIMG.sprite = symbol;
-
+        _audioSource.PlayOneShot(_symbolAudio);
         StartCoroutine(Animate());
     }
 
