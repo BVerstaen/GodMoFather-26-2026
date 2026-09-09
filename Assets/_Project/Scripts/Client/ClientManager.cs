@@ -12,15 +12,16 @@ public class ClientManager : MonoBehaviour
     [Space(5)]
     [SerializeField] private int _numberOfClients;
 
+    private bool _hasReachedLimit;
     private int _clientCount;
     private ClientBehaviour _currentClient;
 
     public Action<int /*client count*/> OnNewClient;
     public Action OnOutOfClient;
 
-    public ClientBehaviour CurrentClient 
-    { 
-        get => _currentClient; 
+    public ClientBehaviour CurrentClient
+    {
+        get => _currentClient;
     }
 
     private void OnValidate()
@@ -36,14 +37,13 @@ public class ClientManager : MonoBehaviour
     [Button("DEBUG - Generate new client")]
     public void GenerateNewClient()
     {
-        if (_clientCount <= 0)
+        if (_clientCount <= 0 && !_hasReachedLimit)
         {
             print("No more clients");
             OnOutOfClient?.Invoke();
-            return;
+            _hasReachedLimit = true;
         }
-        else
-            _clientCount--;
+        _clientCount--;
 
         //Kill current client
         if (_currentClient != null)

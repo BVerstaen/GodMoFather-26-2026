@@ -46,7 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientSoundDifferences
   _soundSource: {fileID: 5364404208127415057}
-  _soundDataList: []
+  _soundDataList:
+  - Sound: {fileID: 0}
+    DiffBetweenSound: 0
 --- !u!82 &5364404208127415057
 AudioSource:
   m_ObjectHideFlags: 0
@@ -295,7 +297,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4494c866ce4dddc4aaacff8de41bcf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientDialog
-  _validDialogs: []
+  _validDialogs:
+  - DialogsList:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   _graphicsSprite: {fileID: 6554244259265893666}
   _minYScale: 0.7
 --- !u!1 &7589658540997800083

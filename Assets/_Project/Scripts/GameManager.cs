@@ -6,17 +6,18 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private ClientManager _clientSpawner;
     [SerializeField] private EndScrenUI _endScreen;
+    [SerializeField] private WingedVictory _victoryButton;
 
     [ReadOnly][SerializeField]private int _currentScore;
 
     private void OnEnable()
     {
-        _clientSpawner.OnOutOfClient += EndGame;
+        _clientSpawner.OnOutOfClient += StartVictoryButton;
     }
 
     private void OnDisable()
     {
-        _clientSpawner.OnOutOfClient -= EndGame;
+        _clientSpawner.OnOutOfClient -= StartVictoryButton;
     }
 
     private void Start()
@@ -37,7 +38,12 @@ public class GameManager : MonoBehaviour
         _clientSpawner.GenerateNewClient();
     }
 
-    private void EndGame()
+    private void StartVictoryButton()
+    {
+        _victoryButton.gameObject.SetActive(true);
+    }
+
+    public  void EndGame()
     {
         Debug.LogWarning("End of the game");
         _endScreen.ShowEndScreen();
