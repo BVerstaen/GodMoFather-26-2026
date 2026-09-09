@@ -347,3 +347,4 @@ MonoBehaviour:
   _soundAnomalies: {fileID: 421866565852843986}
   _clientDialog: {fileID: 8654760675989654983}
   _fakeClientList: []
+  _moveDuration: 2
