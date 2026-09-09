@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _clientSpawner: {fileID: 1498593072}
   _endScreen: {fileID: 432959845}
-  _victoryButton: {fileID: 0}
+  _victoryButton: {fileID: 2019620301}
   _currentScore: 0
 --- !u!4 &196069372
 Transform:
@@ -2543,7 +2543,7 @@ GameObject:
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1901089578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2619,6 +2619,32 @@ MonoBehaviour:
   _rightWing: {fileID: 1455260121}
   _wingSpeed: 20
   _wingAmplitude: 30
+  _offset: {x: -500, y: 500}
+  _spawnAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _spawnTiming: 1
   _hoveringCurve:
     serializedVersion: 2
     m_Curve:

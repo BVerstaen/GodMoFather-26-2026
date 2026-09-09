@@ -9,6 +9,11 @@ public class WingedVictory : MonoBehaviour
     [SerializeField] private float _wingSpeed = 1.0f;
     [SerializeField] private float _wingAmplitude = 2.0f;
 
+    [Header("SpawingOffset")]
+    [SerializeField] private Vector2 _offset;
+    [SerializeField] private AnimationCurve _spawnAnimationCurve;
+    [SerializeField] private float _spawnTiming;
+
     [Header("Hovering around point")]
     [SerializeField] private AnimationCurve _hoveringCurve;
     [SerializeField] private float _hoveringTime = 1f;
@@ -17,6 +22,8 @@ public class WingedVictory : MonoBehaviour
     private Vector3 _leftWingRotation;
     private Vector3 _rightWingRotation;
     private float _timerWing;
+
+    private Vector3 _spawingPosition;
 
     private RectTransform _rect => GetComponent<RectTransform>();
     private Vector2 _defaultPosition;
@@ -27,6 +34,7 @@ public class WingedVictory : MonoBehaviour
     private void Awake()
     {
         _defaultPosition = _rect.anchoredPosition;
+        _spawingPosition = _rect.anchoredPosition + _offset;
         _hoveringCoroutine = StartCoroutine(MovementCoroutine());
     }
 
@@ -42,7 +50,18 @@ public class WingedVictory : MonoBehaviour
 
     private IEnumerator MovementCoroutine()
     {
+        //Spawning routine
         float timeElapsed = 0.0f;
+        while(timeElapsed <= _spawnTiming)
+        {
+            float progress = _spawnAnimationCurve.Evaluate(timeElapsed / _spawnTiming);
+            _rect.anchoredPosition = Vector2.Lerp(_spawingPosition, _defaultPosition, progress);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        //Hovering around
+        timeElapsed = 0.0f;
         float angle;
         Vector2 targetPosition;
         Vector2 basePosition;
