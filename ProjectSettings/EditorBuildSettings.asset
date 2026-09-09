@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/MainMenu.unity
     guid: 6bfe1b9558035cc40ac2c6b99a0883bb
   - enabled: 1
+    path: Assets/_Project/Scenes/GameScene.unity
+    guid: 011657d14ccecf64baa0a581b7d34e17
+  - enabled: 0
     path: Assets/_Project/Scenes/EliseSceneDeplacements.unity
     guid: 0a95555c74863544f8873c77ed2800db
   m_configObjects:
