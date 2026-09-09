@@ -16,3 +16,5 @@ MonoBehaviour:
   InvalidSound:
     Sound: {fileID: 0}
     DiffBetweenSound: 0
+  InvalidDialog:
+  - Oh la la, je ne suis pas un humain !

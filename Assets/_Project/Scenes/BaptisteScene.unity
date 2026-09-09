@@ -595,7 +595,7 @@ MonoBehaviour:
   _clientPrefab:
   - {fileID: 5652497221541585401, guid: 16a3f32f9da151147bbf7a4d3f0a2147, type: 3}
   _spawnPoint: {fileID: 1498593071}
-  _numberOfClients: 1
+  _numberOfClients: 20
 --- !u!1 &1659124911
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +820,7 @@ Transform:
   m_GameObject: {fileID: 1748149859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

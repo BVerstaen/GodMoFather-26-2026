@@ -3,7 +3,7 @@ using PLIbox.Extensions;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 
-public class ClientBehaviour : MonoBehaviour, IPointerDownHandler
+public class ClientBehaviour : MonoBehaviour
 {
     [Header("Anomalies")]
     [SerializeField] private ClientVisualAnomalies _visualAnomalies;
@@ -38,7 +38,11 @@ public class ClientBehaviour : MonoBehaviour, IPointerDownHandler
         TriggerClientDialog();
     }
 
-    public void OnPointerDown(PointerEventData eventData) => TriggerClientDialog();
+    public void OnMouseDown()
+    {
+        TriggerClientDialog();
+    }
 
     public void TriggerClientDialog() => _clientDialog.PlayDialog(_fakeClientSO ? _fakeClientSO.InvalidDialog : null);
+
 }
