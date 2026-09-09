@@ -16,6 +16,7 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene(int sceneIndex)
     {
+        Debug.Log("scnee");
         _sceneToLoad = sceneIndex;
         if (_screenFade != null)
             UIAnimations.Instance.FadeIn(_screenFade, 1.2f, true, OnScreenFadeFinished);
