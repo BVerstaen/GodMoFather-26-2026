@@ -2,20 +2,51 @@ using PLIbox.Extensions;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 public class ClientManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private List<ClientBehaviour> _clientPrefab;
     [SerializeField] private Transform _spawnPoint;
+    [Space(5)]
+    [SerializeField] private int _numberOfClients;
 
+    private int _clientCount;
     private ClientBehaviour _currentClient;
+
+    public Action<int /*client count*/> OnNewClient;
+    public Action OnOutOfClient;
+
+    public ClientBehaviour CurrentClient 
+    { 
+        get => _currentClient; 
+    }
+
+    private void OnValidate()
+    {
+        _numberOfClients = Mathf.Max(1, _numberOfClients);
+    }
+
+    private void Awake()
+    {
+        _clientCount = _numberOfClients;
+    }
 
     [Button("DEBUG - Generate new client")]
     public void GenerateNewClient()
     {
+        if (_clientCount <= 0)
+        {
+            print("No more clients");
+            OnOutOfClient?.Invoke();
+            return;
+        }
+        else
+            _clientCount--;
+
         //Kill current client
-        if(_currentClient != null)
+        if (_currentClient != null)
         {
             Destroy(_currentClient.gameObject);
             _currentClient = null;
@@ -23,5 +54,6 @@ public class ClientManager : MonoBehaviour
 
         //Create new client
         _currentClient = Instantiate(_clientPrefab.GetRandomItem(), _spawnPoint);
+        OnNewClient?.Invoke(_clientCount);
     }
 }
