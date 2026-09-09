@@ -6,20 +6,31 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
+    public static DialogueController Instance { get; protected set; }
+
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private float LetterGapTime;
     [SerializeField] private CanvasGroup dialogueCG;
     [SerializeField] private float DialoguePanelFadeDuration;
-    [SerializeField] private List<string> TestDialogue = new List<string>(); // test
 
     private Coroutine _currentCoroutine = null;
     private int _currentLineIndex;
     private List<string> _currentDialogue = new List<string>();
 
+    public bool IsInDialog { get; private set; }
+
     private Action OnPanelFaded;
 
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+
+        Instance = this;
         OnPanelFaded += Display;
     }
 
@@ -28,14 +39,13 @@ public class DialogueController : MonoBehaviour
         OnPanelFaded -= Display;
     }
 
-    public void LaunchDialogue()
+    public void LaunchDialogue(List<string> newDialog)
     {
-        _currentDialogue = TestDialogue; // pour l'instant test sans data
+        _currentDialogue = newDialog;
         dialogueText.text = "";
 
-        // aller chercher le dialogue du current perso
-
         _currentLineIndex = 0;
+        IsInDialog = true;
 
         UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, true, OnPanelFaded);
     }
@@ -57,12 +67,14 @@ public class DialogueController : MonoBehaviour
         {
             _currentLineIndex++;
 
-            if (_currentLineIndex >= TestDialogue.Count) // fin du dialogue
+            if (_currentLineIndex >= _currentDialogue.Count) // fin du dialogue
+            {
                 UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, false);
+                IsInDialog = false;
+            }
             else 
                 Display();
         }
-
     }
 
     private IEnumerator DisplayLine(string line)
