@@ -21,9 +21,7 @@ public class UIAnimations : MonoBehaviour
 
     private IEnumerator Fade(CanvasGroup cg, float duration, bool fade, Action OnFadeFinished = null)
     {
-        cg.alpha = fade ? 0 : 1;
-        cg.interactable = !fade;
-        cg.blocksRaycasts = !fade;
+        SetCanvasGrpVisibility(!fade, cg);
 
         float time = 0f;
 
@@ -36,13 +34,17 @@ public class UIAnimations : MonoBehaviour
             yield return null;
         }
 
-        cg.alpha = fade ? 1 : 0;
-        cg.interactable = fade;
-        cg.blocksRaycasts = fade;
+        SetCanvasGrpVisibility(fade, cg);
 
         OnFadeFinished?.Invoke();
         _currentCoroutine = null;
     }
 
+    private void SetCanvasGrpVisibility(bool visible, CanvasGroup cg)
+    {
+        cg.alpha = visible ? 1 : 0;
+        cg.interactable = visible;
+        cg.blocksRaycasts = visible;
+    }
 
 }

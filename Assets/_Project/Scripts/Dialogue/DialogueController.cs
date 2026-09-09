@@ -42,7 +42,6 @@ public class DialogueController : MonoBehaviour
 
     private void Display()
     {
-        Debug.Log("display");
         _currentCoroutine = StartCoroutine(DisplayLine(_currentDialogue[_currentLineIndex]));
     }
 
@@ -57,7 +56,11 @@ public class DialogueController : MonoBehaviour
         else
         {
             _currentLineIndex++;
-            Display();
+
+            if (_currentLineIndex >= TestDialogue.Count) // fin du dialogue
+                UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, false);
+            else 
+                Display();
         }
 
     }
