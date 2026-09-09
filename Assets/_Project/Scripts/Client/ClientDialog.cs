@@ -59,6 +59,7 @@ public class ClientDialog : MonoBehaviour
 
     private void ToggleAnimation((bool isWriting, float timeGap) data)
     {
+        Debug.Log("toggleanim");
         if (!data.isWriting)
         {
             _graphicsSprite.localScale = _baseGraphicsScale;
