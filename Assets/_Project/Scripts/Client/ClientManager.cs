@@ -48,12 +48,14 @@ public class ClientManager : MonoBehaviour
         //Kill current client
         if (_currentClient != null)
         {
-            Destroy(_currentClient.gameObject);
+            //Destroy(_currentClient.gameObject);
+            _currentClient.Move(false);
             _currentClient = null;
         }
 
         //Create new client
         _currentClient = Instantiate(_clientPrefab.GetRandomItem(), _spawnPoint);
+        _currentClient.Move(true);
         OnNewClient?.Invoke(_clientCount);
     }
 }
