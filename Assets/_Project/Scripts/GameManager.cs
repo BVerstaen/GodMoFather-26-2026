@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,8 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ClientManager _clientSpawner;
     [SerializeField] private EndScrenUI _endScreen;
     [SerializeField] private WingedVictory _victoryButton;
+    [SerializeField] private GameObject _defeatPanel;
 
-    [ReadOnly][SerializeField]private int _currentScore;
+    [ReadOnly][SerializeField] private int _currentScore;
 
     private void OnEnable()
     {
@@ -35,6 +37,15 @@ public class GameManager : MonoBehaviour
         {
             _currentScore++;
         }
+        else if (_clientSpawner.CurrentClient.IsFakeClient && isAccepted)
+        {
+            // client humain accepté 
+            if (_defeatPanel.TryGetComponent(out Animator anim))
+            {
+                anim.SetTrigger("display");
+            }
+        }
+
         _clientSpawner.GenerateNewClient();
     }
 

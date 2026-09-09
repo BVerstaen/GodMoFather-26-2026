@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class DialogueController : MonoBehaviour
 {
@@ -56,10 +57,12 @@ public class DialogueController : MonoBehaviour
         _currentLineIndex = 0;
         IsInDialog = true;
 
-        if (!wasInDialog)
-            UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, true, OnPanelFaded);
-        else
-            Display();
+        //if (!wasInDialog)
+        //    UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, true, OnPanelFaded);
+        //else
+
+
+        Display();
     }
 
     private void Display()
@@ -81,7 +84,8 @@ public class DialogueController : MonoBehaviour
 
             if (_currentLineIndex >= _currentDialogue.Count) // fin du dialogue
             {
-                UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, false);
+               // UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, false);
+                dialogueText.text = "";
                 IsInDialog = false;
             }
             else 
