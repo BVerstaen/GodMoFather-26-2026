@@ -703,6 +703,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   dialogueText: {fileID: 170922550}
   LetterGapTime: 0.05
+  dialogueCG: {fileID: 1236168302}
+  DialoguePanelFadeDuration: 1
   TestDialogue:
   - aaaaaaaaaa
   - bbbbbbbbbbbbbbbb
@@ -901,6 +903,7 @@ GameObject:
   - component: {fileID: 1236168301}
   - component: {fileID: 1236168300}
   - component: {fileID: 1236168299}
+  - component: {fileID: 1236168302}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -1024,6 +1027,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236168297}
   m_CullTransparentMesh: 1
+--- !u!225 &1236168302
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236168297}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!1 &2027812681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2027812683}
+  - component: {fileID: 2027812682}
+  m_Layer: 0
+  m_Name: UIAnimationsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2027812682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027812681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494fd6c3680dbbd43a0dccc611385e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIAnimations
+--- !u!4 &2027812683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027812681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 659.48804, y: 460.09604, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110894438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,3 +1228,4 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 1043009507}
   - {fileID: 812404990}
+  - {fileID: 2027812683}
