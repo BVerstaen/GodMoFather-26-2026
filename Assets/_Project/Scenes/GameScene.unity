@@ -867,6 +867,7 @@ GameObject:
   - component: {fileID: 716705706}
   - component: {fileID: 716705705}
   - component: {fileID: 716705704}
+  - component: {fileID: 716705707}
   m_Layer: 5
   m_Name: DeniedButton
   m_TagString: Untagged
@@ -988,6 +989,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716705702}
   m_CullTransparentMesh: 1
+--- !u!114 &716705707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716705702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa25d5afc932e274cae898757bf63a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PLI.UI.UniversalHoverButton
+  _sizeAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  _sizeAnimationDuration: 0.3
+  _sizeAnimtionAmplitude: 0.3
+  _onHoverStart:
+    m_PersistentCalls:
+      m_Calls: []
+  _onHoverEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &744657570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1516,7 @@ GameObject:
   - component: {fileID: 1373455827}
   - component: {fileID: 1373455826}
   - component: {fileID: 1373455825}
+  - component: {fileID: 1373455828}
   m_Layer: 5
   m_Name: ValidButton
   m_TagString: Untagged
@@ -1592,6 +1638,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373455823}
   m_CullTransparentMesh: 1
+--- !u!114 &1373455828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373455823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa25d5afc932e274cae898757bf63a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PLI.UI.UniversalHoverButton
+  _sizeAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  _sizeAnimationDuration: 0.3
+  _sizeAnimtionAmplitude: 0.3
+  _onHoverStart:
+    m_PersistentCalls:
+      m_Calls: []
+  _onHoverEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1498593070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1729,7 @@ MonoBehaviour:
   _clientPrefab:
   - {fileID: 5652497221541585401, guid: 16a3f32f9da151147bbf7a4d3f0a2147, type: 3}
   _spawnPoint: {fileID: 1498593071}
-  _numberOfClients: 1
+  _numberOfClients: 5
 --- !u!1 &1659124911
 GameObject:
   m_ObjectHideFlags: 0

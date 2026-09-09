@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 118998427}
   - component: {fileID: 118998426}
   - component: {fileID: 118998425}
+  - component: {fileID: 118998428}
   m_Layer: 5
   m_Name: BTN_StartGame
   m_TagString: Untagged
@@ -252,6 +253,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118998423}
   m_CullTransparentMesh: 1
+--- !u!114 &118998428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118998423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa25d5afc932e274cae898757bf63a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PLI.UI.UniversalHoverButton
+  _sizeAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  _sizeAnimationDuration: 0.3
+  _sizeAnimtionAmplitude: 0.3
+  _onHoverStart:
+    m_PersistentCalls:
+      m_Calls: []
+  _onHoverEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494fd6c3680dbbd43a0dccc611385e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAnimations
+  _menuFadeDuration: 0
 --- !u!4 &1931957387
 Transform:
   m_ObjectHideFlags: 0
