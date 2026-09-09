@@ -7,11 +7,22 @@ public class UIAnimations : MonoBehaviour
     private Coroutine _currentCoroutine = null;
     public static UIAnimations Instance;
 
+    [SerializeField] private float _menuFadeDuration;
+
     private void Awake()
     {
         Instance = this;
     }
 
+    // acces pour les boutons
+    public void FadeInPanel(CanvasGroup cg)
+    {
+        FadeIn(cg, _menuFadeDuration, true);
+    }
+    public void FadeOutPanel(CanvasGroup cg)
+    {
+        FadeIn(cg, _menuFadeDuration, false);
+    }
 
     public void FadeIn(CanvasGroup cg, float duration, bool fade, Action OnFadeFinished = null)
     {
