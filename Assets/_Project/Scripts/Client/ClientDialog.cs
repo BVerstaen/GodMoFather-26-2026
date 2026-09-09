@@ -20,8 +20,14 @@ public class ClientDialog : MonoBehaviour
 
     private List<string> _currentDialogList;
     private bool _isFirstDialog = true;
+    private Vector3 _baseGraphicsScale;
 
     private Coroutine _dialogAnimation;
+
+    private void Awake()
+    {
+        _baseGraphicsScale = _graphicsSprite.localScale;
+    }
 
     private void OnEnable()
     {
@@ -55,8 +61,9 @@ public class ClientDialog : MonoBehaviour
     {
         if (!data.isWriting)
         {
-            _graphicsSprite.localScale = Vector3.one;
-            StopCoroutine(_dialogAnimation);
+            _graphicsSprite.localScale = _baseGraphicsScale;
+            if(_dialogAnimation != null)
+                StopCoroutine(_dialogAnimation);
             _dialogAnimation = null;
             return;
         }
@@ -67,10 +74,11 @@ public class ClientDialog : MonoBehaviour
     {
         float timeElapsed = 0.0f;
         Vector3 newScale = _graphicsSprite.localScale;
+        float minScale = _minYScale * _baseGraphicsScale.y;
         while (true)
         {
             timeElapsed += Time.deltaTime;
-            newScale.y = Mathf.Lerp(_minYScale, 1, (Mathf.Sin(timeElapsed / timeGap) + 1) / 2);
+            newScale.y = Mathf.Lerp(minScale, _baseGraphicsScale.y, (Mathf.Sin(timeElapsed / timeGap) + 1) / 2);
             _graphicsSprite.localScale = newScale;
             yield return new WaitForEndOfFrame();
         }

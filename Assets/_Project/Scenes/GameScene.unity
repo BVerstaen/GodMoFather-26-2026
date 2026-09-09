@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _clientSpawner: {fileID: 1498593072}
   _endScreen: {fileID: 432959845}
-  _victoryButton: {fileID: 0}
+  _victoryButton: {fileID: 1244386340}
   _currentScore: 0
 --- !u!4 &196069372
 Transform:
@@ -2268,7 +2268,7 @@ MonoBehaviour:
   _clientPrefab:
   - {fileID: 5652497221541585401, guid: 16a3f32f9da151147bbf7a4d3f0a2147, type: 3}
   _spawnPoint: {fileID: 1498593071}
-  _numberOfClients: 5
+  _numberOfClients: 1
 --- !u!1 &1659124911
 GameObject:
   m_ObjectHideFlags: 0
