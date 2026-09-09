@@ -18,6 +18,11 @@ public class ClientManager : MonoBehaviour
     public Action<int /*client count*/> OnNewClient;
     public Action OnOutOfClient;
 
+    public ClientBehaviour CurrentClient 
+    { 
+        get => _currentClient; 
+    }
+
     private void OnValidate()
     {
         _numberOfClients = Mathf.Max(1, _numberOfClients);
@@ -33,6 +38,7 @@ public class ClientManager : MonoBehaviour
     {
         if (_clientCount <= 0)
         {
+            print("No more clients");
             OnOutOfClient?.Invoke();
             return;
         }
