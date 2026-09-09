@@ -488,6 +488,7 @@ RectTransform:
   - {fileID: 2070164122}
   - {fileID: 42200662}
   - {fileID: 2138463156}
+  - {fileID: 1095295101}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1062,22 +1063,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad818a3beb3f0347bee131a75f9e548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostInteractionInput
-  _ghostInteraction_0: {fileID: 8427692767903632302, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
-  _ghostInteraction_1: {fileID: -8689976115517596489, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
-  _ghostInteraction_2: {fileID: 6465298882502159570, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
-  _ghostInteraction_3: {fileID: 4906714756674966492, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
-  _onInteraction_0:
-    m_PersistentCalls:
-      m_Calls: []
-  _onInteraction_1:
-    m_PersistentCalls:
-      m_Calls: []
-  _onInteraction_2:
-    m_PersistentCalls:
-      m_Calls: []
-  _onInteraction_3:
-    m_PersistentCalls:
-      m_Calls: []
+  _ghostInteractions:
+  - key: {fileID: 212295072805798116, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - key: {fileID: -8689976115517596489, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  - key: {fileID: 6465298882502159570, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  - key: {fileID: 8427692767903632302, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - key: {fileID: 8401225677674450055, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  - key: {fileID: 7441773544815523985, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - key: {fileID: 4906714756674966492, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - key: {fileID: 8443302251315735863, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _symbolPrefab: {fileID: 2170616038094381978, guid: 033d2c78dba6ab94c9a6f78d5fa5782b, type: 3}
+  _symbolParent: {fileID: 1852191536}
 --- !u!4 &744657572
 Transform:
   m_ObjectHideFlags: 0
@@ -1357,6 +1361,51 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1095295100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1095295101}
+  - component: {fileID: 1095295103}
+  m_Layer: 5
+  m_Name: GhostInteractionPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1095295101
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095295100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1852191536}
+  m_Father: {fileID: 270999453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1095295103
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095295100}
+  m_CullTransparentMesh: 1
 --- !u!1 &1289823001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,6 +2685,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757615076}
   m_CullTransparentMesh: 1
+--- !u!1 &1852191535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1852191536}
+  - component: {fileID: 1852191537}
+  m_Layer: 5
+  m_Name: InteractionsParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1852191536
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852191535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1095295101}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -466, y: 384}
+  m_SizeDelta: {x: 265.06433, y: 235.00098}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1852191537
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852191535}
+  m_CullTransparentMesh: 1
 --- !u!1 &1919623026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,9 +3446,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 389402436}
   - {fileID: 397599724}
-  - {fileID: 270999453}
   - {fileID: 744657572}
   - {fileID: 1498593071}
+  - {fileID: 270999453}
   - {fileID: 1651573354}
   - {fileID: 1996137139}
   - {fileID: 106762602}
