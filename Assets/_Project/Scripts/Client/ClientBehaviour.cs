@@ -1,7 +1,7 @@
 using UnityEngine;
 using PLIbox.Extensions;
 using System.Collections.Generic;
-using UnityEngine.EventSystems;
+using System.Collections;
 
 public class ClientBehaviour : MonoBehaviour
 {
@@ -12,6 +12,11 @@ public class ClientBehaviour : MonoBehaviour
 
     [Space(5)]
     [SerializeField] private List<FakeClientSO> _fakeClientList;
+
+    [Header("Movements")]
+    [SerializeField] private float _moveDuration = 2f;
+
+    private float _gameWidth;
 
     private FakeClientSO _fakeClientSO = null;
 
@@ -34,7 +39,11 @@ public class ClientBehaviour : MonoBehaviour
         else
             _soundAnomalies.TriggerSoundEffect();
 
-        //TODO : play at end of animation
+        // largeur du jeu (avec la cam)
+        Camera cam = Camera.main;
+        float height = cam.orthographicSize;
+        _gameWidth = height * cam.aspect;
+
         TriggerClientDialog();
     }
 
@@ -45,4 +54,41 @@ public class ClientBehaviour : MonoBehaviour
 
     public void TriggerClientDialog() => _clientDialog.PlayDialog(_fakeClientSO ? _fakeClientSO.InvalidDialog : null);
 
+    public void Move(bool IsEntry)
+    {
+        StartCoroutine(MoveClient(IsEntry));
+    }
+
+    private IEnumerator MoveClient(bool IsEntry)
+    {
+        if (ClientPlacementPoint.Instance == null)
+            yield break;
+
+        Transform ClientTargetPoint = ClientPlacementPoint.Instance.transform;
+
+        float leftX = Camera.main.transform.position.x - _gameWidth;
+        float rightX = Camera.main.transform.position.x + _gameWidth;
+
+        float startingX = IsEntry ? leftX : ClientTargetPoint.position.x;
+        Vector2 startPoint = new Vector2(startingX, ClientTargetPoint.position.y);
+
+        float targetX = IsEntry ? ClientTargetPoint.position.x : rightX;
+        Vector2 targetPoint = new Vector2(targetX, ClientTargetPoint.position.y);
+
+        float time = 0;
+        while (time < _moveDuration)
+        {
+            time += Time.deltaTime;
+            float t = time / _moveDuration;
+
+            transform.position = Vector2.Lerp(startPoint, targetPoint, t);
+
+            yield return null;
+        }
+
+        if (!IsEntry)
+            Destroy(gameObject);
+    }
+
+        
 }
