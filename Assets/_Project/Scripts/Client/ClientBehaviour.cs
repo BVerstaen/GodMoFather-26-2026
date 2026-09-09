@@ -47,6 +47,9 @@ public class ClientBehaviour : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (PauseManager.IsPaused)
+            return;
+
         TriggerClientDialog();
     }
 
