@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private ClientManager _clientSpawner;
+    [SerializeField] private EndScrenUI _endScreen;
 
     [ReadOnly][SerializeField]private int _currentScore;
 
@@ -39,5 +40,6 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         Debug.LogWarning("End of the game");
+        _endScreen.ShowEndScreen();
     }
 }
