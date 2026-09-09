@@ -15,7 +15,7 @@ public class EndScrenUI : MonoBehaviour
     [Scene][SerializeField] private string _menuScene;
 
     private Coroutine _waitCoroutine;
-    private Action _onEndScreenFaded;
+    public Action _onEndScreenFaded;
 
     public void ShowEndScreen()
     {
