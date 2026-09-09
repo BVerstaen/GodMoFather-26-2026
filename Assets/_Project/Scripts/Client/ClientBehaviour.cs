@@ -8,6 +8,7 @@ public class ClientBehaviour : MonoBehaviour
     [Header("Anomalies")]
     [SerializeField] private ClientVisualAnomalies _visualAnomalies;
     [SerializeField] private ClientSoundDifferences _soundAnomalies;
+    [SerializeField] private ClientDialog _clientDialog;
 
     [Space(5)]
     [SerializeField] private List<FakeClientSO> _fakeClientList;
@@ -17,7 +18,7 @@ public class ClientBehaviour : MonoBehaviour
 
     private float _gameWidth;
 
-    private FakeClientSO _fakeClient = null;
+    private FakeClientSO _fakeClientSO = null;
 
     public bool IsFakeClient
     {
@@ -30,11 +31,11 @@ public class ClientBehaviour : MonoBehaviour
         //Choose if is fake or not
         IsFakeClient = RandomExtensions.RandomBool();
         if (IsFakeClient)
-            _fakeClient = _fakeClientList.GetRandomItem();
+            _fakeClientSO = _fakeClientList.GetRandomItem();
 
-        _visualAnomalies.SetupSprite(_fakeClient ? _fakeClient.InvalidVisual : null);
-        if (_fakeClient != null && _fakeClient.InvalidSound.Sound != null)
-            _soundAnomalies.TriggerSoundEffect(_fakeClient.InvalidSound);
+        _visualAnomalies.SetupSprite(_fakeClientSO ? _fakeClientSO.InvalidVisual : null);
+        if (_fakeClientSO != null && _fakeClientSO.InvalidSound.Sound != null)
+            _soundAnomalies.TriggerSoundEffect(_fakeClientSO.InvalidSound);
         else
             _soundAnomalies.TriggerSoundEffect();
 
@@ -42,7 +43,16 @@ public class ClientBehaviour : MonoBehaviour
         Camera cam = Camera.main;
         float height = cam.orthographicSize;
         _gameWidth = height * cam.aspect;
+
+        TriggerClientDialog();
     }
+
+    public void OnMouseDown()
+    {
+        TriggerClientDialog();
+    }
+
+    public void TriggerClientDialog() => _clientDialog.PlayDialog(_fakeClientSO ? _fakeClientSO.InvalidDialog : null);
 
     public void Move(bool IsEntry)
     {
