@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ClientManager _clientSpawner;
     [SerializeField] private EndScrenUI _endScreen;
     [SerializeField] private WingedVictory _victoryButton;
-    [SerializeField] private GameObject _defeatPanel;
+    [SerializeField] private DefeatPanel _defeatPanel;
+    
 
     [ReadOnly][SerializeField] private int _currentScore;
 
@@ -40,14 +41,11 @@ public class GameManager : MonoBehaviour
         {
             _currentScore++;
         }
-        else if (_clientSpawner.CurrentClient.IsFakeClient && isAccepted)
+        else 
         {
-            // client humain accepté 
-            if (_defeatPanel.TryGetComponent(out Animator anim))
-            {
-                anim.SetTrigger("display");
-            }
+            _defeatPanel.DisplayDefeatPanel(_clientSpawner.CurrentClient.IsFakeClient && isAccepted);
         }
+
 
         _clientSpawner.GenerateNewClient(isAccepted);
     }

@@ -317,7 +317,7 @@ MonoBehaviour:
   _clientSpawner: {fileID: 1498593072}
   _endScreen: {fileID: 655782187}
   _victoryButton: {fileID: 2019620301}
-  _defeatPanel: {fileID: 531204444}
+  _defeatPanel: {fileID: 531204450}
   _currentScore: 0
 --- !u!4 &106762602
 Transform:
@@ -1340,6 +1340,7 @@ GameObject:
   - component: {fileID: 531204447}
   - component: {fileID: 531204446}
   - component: {fileID: 531204448}
+  - component: {fileID: 531204450}
   - component: {fileID: 531204449}
   m_Layer: 5
   m_Name: DefeatPanel
@@ -1440,6 +1441,22 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &531204450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531204444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e5fd9ec768c7849be6f4cc7552f55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefeatPanel
+  _onHumanEnterText: It was a human...
+  _onMonsterEjectedText: It was a monster...
+  _defeatText: {fileID: 1471827292}
+  _defeatAnimator: {fileID: 531204448}
 --- !u!1 &571232300
 GameObject:
   m_ObjectHideFlags: 0
