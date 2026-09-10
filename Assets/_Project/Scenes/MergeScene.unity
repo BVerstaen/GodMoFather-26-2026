@@ -2903,7 +2903,7 @@ MonoBehaviour:
   _clientPrefab:
   - {fileID: 5652497221541585401, guid: 16a3f32f9da151147bbf7a4d3f0a2147, type: 3}
   _spawnPoint: {fileID: 1498593071}
-  _numberOfClients: 20
+  _numberOfClients: 1
 --- !u!1 &1604106416
 GameObject:
   m_ObjectHideFlags: 0
