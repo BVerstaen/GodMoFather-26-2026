@@ -47,9 +47,79 @@
                     "priority": 0
                 },
                 {
-                    "name": "GhostInteraction_4",
+                    "name": "GhostInteraction_ArrowUp",
                     "type": "Button",
                     "id": "53a6bfe0-fa08-4f05-90ea-8bc939e8a720",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_ArrowDown",
+                    "type": "Button",
+                    "id": "d829e4f1-9489-4771-bc40-4fdff3ab16ca",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_ArrowLeft",
+                    "type": "Button",
+                    "id": "3747c05d-585b-401e-8eed-bcb32edefe56",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_ArrowRight",
+                    "type": "Button",
+                    "id": "59a68d1f-e534-4598-8a20-f8c592a553e0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_ThumbUp",
+                    "type": "Button",
+                    "id": "d9834a5b-8989-4098-b783-bcbfd745e717",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_ThumbDown",
+                    "type": "Button",
+                    "id": "5c9579e6-870b-4f41-a655-bab788085a86",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_Dialog",
+                    "type": "Button",
+                    "id": "8b09c7c1-bee2-474b-a018-cf1a6dee148c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_Sound",
+                    "type": "Button",
+                    "id": "3c802be9-e24e-43ee-a3cc-d75f9b9ecd74",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -193,11 +263,88 @@
                 {
                     "name": "",
                     "id": "ac8c5598-3812-4ee3-a8e2-6827ade6ad0d",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_ArrowUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ebf02bb-5d7b-4da2-ac12-8267e92d0bb0",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_ArrowDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "baa2a156-be9b-4716-a4b9-339f7b6fd89f",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_ArrowLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb2bacdb-8a33-40df-ad23-ae48e9b8749c",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_ArrowRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e526e3d6-1751-46b9-8035-8cc36edb0af7",
                     "path": "<Keyboard>/5",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GhostInteraction_4",
+                    "action": "GhostInteraction_ThumbUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1fcc7056-3515-4d7d-b5c6-c094cbe3f62d",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_ThumbDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bff2f4a6-800a-42cf-8466-a120125a616c",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_Dialog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45a2efdf-21fe-4d6d-9584-39073664ecff",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_Sound",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

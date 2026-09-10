@@ -1849,7 +1849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostInteractionInput
   _ghostInteractions:
-  - key: {fileID: -8689976115517596489, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+  - key: {fileID: 8427692767903632302, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
         m_Calls:
@@ -1865,7 +1865,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - key: {fileID: 6465298882502159570, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+  - key: {fileID: -8689976115517596489, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
         m_Calls:
@@ -1881,7 +1881,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - key: {fileID: 8427692767903632302, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+  - key: {fileID: -719827196048143935, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
         m_Calls:
@@ -1890,14 +1890,14 @@ MonoBehaviour:
           m_MethodName: DisplayInteraction
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 21300000, guid: 0a36b8db856370049b1f1900ff12aad7, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - key: {fileID: -3876154610565639851, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+  - key: {fileID: 4906714756674966492, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
         m_Calls:
@@ -1913,7 +1913,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - key: {fileID: 4906714756674966492, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+  - key: {fileID: 6465298882502159570, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
         m_Calls:
@@ -1924,6 +1924,118 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: {fileID: -3475481943035182108, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 744657571}
+          m_TargetAssemblyTypeName: GhostInteractionInput, Assembly-CSharp
+          m_MethodName: DisplayInteraction
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: ee5f5b70201e1a041a603cd638a2d37b, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: {fileID: 8949146500007138563, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 744657571}
+          m_TargetAssemblyTypeName: GhostInteractionInput, Assembly-CSharp
+          m_MethodName: DisplayInteraction
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 26cd3957c20907c41b1721e44cb98865, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: {fileID: 8706928410290732790, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 744657571}
+          m_TargetAssemblyTypeName: GhostInteractionInput, Assembly-CSharp
+          m_MethodName: DisplayInteraction
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 6832c77bc485cc649bbbbd16728fa986, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: {fileID: -3876154610565639851, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 744657571}
+          m_TargetAssemblyTypeName: GhostInteractionInput, Assembly-CSharp
+          m_MethodName: DisplayInteraction
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 686acd0f0d07e624d94539ba30ea4c3f, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: {fileID: 2952147592283814885, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 744657571}
+          m_TargetAssemblyTypeName: GhostInteractionInput, Assembly-CSharp
+          m_MethodName: DisplayInteraction
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 57a3f8e368e2aad46a56c49ad0399c8e, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: {fileID: 7137851293441334343, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 744657571}
+          m_TargetAssemblyTypeName: GhostInteractionInput, Assembly-CSharp
+          m_MethodName: DisplayInteraction
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 51ba553499418a141bd158bc602848ae, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: {fileID: 3390973659857803402, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
+    value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 744657571}
+          m_TargetAssemblyTypeName: GhostInteractionInput, Assembly-CSharp
+          m_MethodName: DisplayInteraction
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 03ad1597019937a4cb03f731a16b8663, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
