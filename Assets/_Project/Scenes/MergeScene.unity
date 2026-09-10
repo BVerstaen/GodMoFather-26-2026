@@ -1688,7 +1688,19 @@ MonoBehaviour:
   - key: {fileID: 4906714756674966492, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1748149864}
+          m_TargetAssemblyTypeName: ShakingCamInteraction, Assembly-CSharp
+          m_MethodName: PlayCameraShake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   _symbolPrefab: {fileID: 2170616038094381978, guid: 033d2c78dba6ab94c9a6f78d5fa5782b, type: 3}
   _symbolParent: {fileID: 1852191536}
   _ghostAudioSource: {fileID: 744657573}

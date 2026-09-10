@@ -10,6 +10,7 @@ public class ShakingCamInteraction : MonoBehaviour
     [SerializeField] private float _shakeTravelDuration = 1.0f;
     [SerializeField] private float _shakeRadius = 1.0f;
 
+    private bool _isShaking;
     private Vector3 _defaultPosition;
     private Coroutine _cameraShakeCoroutine;
 
@@ -21,17 +22,24 @@ public class ShakingCamInteraction : MonoBehaviour
     [Button("DEBUG - Play shake cam")]
     public void PlayCameraShake()
     {
+        if (_isShaking)
+            return;
+
         _cameraShakeCoroutine = StartCoroutine(MovementCoroutine());
     }
 
     private IEnumerator MovementCoroutine()
     {
         //Shaking
+        _isShaking = true;
+
         float globalTimeElapsed = 0.0f;
         float timeElapsed = 0.0f;
         float angle;
+
         Vector3 targetPosition = transform.localPosition;
         Vector3 basePosition = transform.localPosition;
+
         while (globalTimeElapsed <= _shakeDuration)
         {
             timeElapsed = 0.0f;
@@ -49,6 +57,7 @@ public class ShakingCamInteraction : MonoBehaviour
             }
         }
 
+        _isShaking = false;
         transform.localPosition = _defaultPosition;
     }
 }
