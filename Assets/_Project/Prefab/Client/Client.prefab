@@ -244,7 +244,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -377,6 +377,7 @@ MonoBehaviour:
   _clientDialog: {fileID: 8654760675989654983}
   _fakeClientList: []
   _moveDuration: 2
+  _fadeInDuration: 0.3
 --- !u!54 &7385374060691771746
 Rigidbody:
   m_ObjectHideFlags: 0
