@@ -1667,7 +1667,19 @@ MonoBehaviour:
   - key: {fileID: 6465298882502159570, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1748149864}
+          m_TargetAssemblyTypeName: ShakingCamInteraction, Assembly-CSharp
+          m_MethodName: PlayCameraShake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - key: {fileID: 8427692767903632302, guid: 3b722352fdc61da4aaf86cfe0b00aea1, type: 3}
     value:
       m_PersistentCalls:
@@ -2905,6 +2917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339126221}
   - component: {fileID: 1339126222}
+  - component: {fileID: 1339126223}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -2944,6 +2957,61 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+--- !u!114 &1339126223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339126220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccb2267ab4b0684b93f09fa01693d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishEyeInteraction
+  _fishEyeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0.0019024158
+      outSlope: -0.0019024158
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.6382221
+    - serializedVersion: 3
+      time: 0.4
+      value: 0.9
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6
+      value: 0.9
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0.0020515667
+      outSlope: 0.0020515667
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5887125
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  _fishEyeDuration: 2
 --- !u!1 &1369954502
 GameObject:
   m_ObjectHideFlags: 0
