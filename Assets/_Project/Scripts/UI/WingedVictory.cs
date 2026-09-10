@@ -19,6 +19,10 @@ public class WingedVictory : MonoBehaviour
     [SerializeField] private float _hoveringTime = 1f;
     [SerializeField] private float _hoveringRadius = 1f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource _soundSource;
+    [SerializeField] private float _Sounddelay;
+
     private Vector3 _leftWingRotation;
     private Vector3 _rightWingRotation;
     private float _timerWing;
@@ -29,6 +33,7 @@ public class WingedVictory : MonoBehaviour
     private Vector2 _defaultPosition;
     private float _angle;
 
+    private Coroutine _soundCoroutine;
     private Coroutine _hoveringCoroutine;
 
     private void Awake()
@@ -36,6 +41,7 @@ public class WingedVictory : MonoBehaviour
         _defaultPosition = _rect.anchoredPosition;
         _spawingPosition = _rect.anchoredPosition + _offset;
         _hoveringCoroutine = StartCoroutine(MovementCoroutine());
+        _soundCoroutine = StartCoroutine(SoundComeGetMeRoutine());
     }
 
     private void Update()
@@ -79,6 +85,15 @@ public class WingedVictory : MonoBehaviour
                 _rect.anchoredPosition = Vector2.Lerp(basePosition, targetPosition, _hoveringCurve.Evaluate(timeElapsed / _hoveringTime));
                 yield return null;
             }
+        }
+    }
+
+    private IEnumerator SoundComeGetMeRoutine()
+    {
+        while (true)
+        {
+            _soundSource.Play();
+            yield return new WaitForSeconds(_soundSource.clip.length + _Sounddelay);
         }
     }
 }
