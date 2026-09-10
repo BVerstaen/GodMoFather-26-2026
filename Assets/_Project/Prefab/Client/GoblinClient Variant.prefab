@@ -40,6 +40,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoblinClient Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _visualList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 330911cdb342891409f74a0a6aa63bf4, type: 3}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _fakeClientList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_fakeClientList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3947583d9d3e57f4fa252dbc5558c85b, type: 2}
     - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 809.1077

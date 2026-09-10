@@ -3942,7 +3942,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientManager
   _clientPrefab:
-  - {fileID: 5652497221541585401, guid: 16a3f32f9da151147bbf7a4d3f0a2147, type: 3}
+  - {fileID: 8641715262135494640, guid: 31e195b81dcd6424c96f965570942168, type: 3}
+  - {fileID: 7240463319009541217, guid: f29d8d31325f00849bce174615caa80d, type: 3}
+  - {fileID: 1874645209516380963, guid: d7c46c3c98d9d224da4ce90a76715977, type: 3}
   _spawnPoint: {fileID: 1498593071}
   _numberOfClients: 1
 --- !u!1 &1604106416
