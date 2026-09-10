@@ -45,46 +45,6 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
-                },
-                {
-                    "name": "GhostInteraction_4",
-                    "type": "Button",
-                    "id": "091aa080-0da1-4fe7-81d5-5380eacfb582",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
-                    "name": "GhostInteraction_5",
-                    "type": "Button",
-                    "id": "3164420a-efe2-48c0-bab1-24108e57e9da",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
-                    "name": "GhostInteraction_6",
-                    "type": "Button",
-                    "id": "4eb3e65d-5121-4f2a-9ee2-d2170e4e8f13",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
-                    "name": "GhostInteraction_7",
-                    "type": "Button",
-                    "id": "cf9d26a3-5706-4179-9c0f-f8a649efba5f",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
                 }
             ],
             "bindings": [
@@ -101,8 +61,41 @@
                 },
                 {
                     "name": "",
+                    "id": "1595fc22-8e8c-4a91-b30e-7d9cff754c69",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e14631c-9697-49d4-8209-1764dd8d234c",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "49bf3c60-34fc-453f-b07f-b0d98c211345",
-                    "path": "<Keyboard>/2",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c3d3448-89d2-4108-967c-c945173a1995",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -123,6 +116,28 @@
                 },
                 {
                     "name": "",
+                    "id": "4dcc3378-3954-4874-a94c-57c5b9b75349",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10a8966f-2ef4-4999-9fd3-91c8303acd83",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "103095be-cd7b-4d2b-8fd4-eb44fd55b133",
                     "path": "<Keyboard>/4",
                     "interactions": "",
@@ -134,45 +149,23 @@
                 },
                 {
                     "name": "",
-                    "id": "1c81ea55-3edb-4904-9269-e643d63afeb1",
-                    "path": "<Keyboard>/5",
+                    "id": "7e30ec41-56e0-4115-9a38-af291d16b63c",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GhostInteraction_4",
+                    "action": "GhostInteraction_3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b9220296-8f02-4e4a-a984-8b7ebf0c3074",
-                    "path": "<Keyboard>/6",
+                    "id": "ceb7edb9-0c89-4e68-949d-68aadf66520a",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GhostInteraction_5",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "70325964-339e-45ae-a0a9-fd40762d395d",
-                    "path": "<Keyboard>/7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "GhostInteraction_6",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "60733cba-5303-46a5-a8c9-c8d5ec6cc394",
-                    "path": "<Keyboard>/8",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "GhostInteraction_7",
+                    "action": "GhostInteraction_3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
