@@ -7,7 +7,7 @@ public class GhostInteractionInput : MonoBehaviour
     [SerializeField] private Dictionary<InputActionReference, Sprite> _ghostInteractions = new Dictionary<InputActionReference, Sprite>();
     [SerializeField] private GameObject _symbolPrefab;
     [SerializeField] private Transform _symbolParent;
-
+    [SerializeField] private AudioSource _ghostAudioSource;
     private void OnEnable()
     {
         foreach (KeyValuePair<InputActionReference, Sprite> kvp in _ghostInteractions)
@@ -31,6 +31,7 @@ public class GhostInteractionInput : MonoBehaviour
         if (interactionGO.TryGetComponent<SymbolAnimation>(out SymbolAnimation symbolAnim))
         {
             symbolAnim.Init(symbol);
+            _ghostAudioSource.Play();
         }
     }
 

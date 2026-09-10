@@ -58,4 +58,10 @@ public class ClientManager : MonoBehaviour
         _currentClient.Move(true);
         OnNewClient?.Invoke(_clientCount);
     }
+
+    public void KillClient()
+    {
+        if (_currentClient != null)
+            Destroy(_currentClient.gameObject);
+    }
 }
