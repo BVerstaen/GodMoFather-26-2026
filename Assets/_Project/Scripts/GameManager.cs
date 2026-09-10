@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EndScrenUI _endScreen;
     [SerializeField] private WingedVictory _victoryButton;
     [SerializeField] private DefeatPanel _defeatPanel;
-    [SerializeField] private TextMeshProUGUI _timerText;
+    [SerializeField] private TimerVisual _timervisual;
     [SerializeField] private TextMeshProUGUI _scoreText;
 
     [ReadOnly][SerializeField] private int _currentScore;
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         if (!PauseManager.IsPaused)
         {
             _currentTimer -= Time.deltaTime;
-            _timerText.text = ((int)_currentTimer).ToString();
+            _timervisual.UpdateTimer(_currentTimer);
         }
            
     }
