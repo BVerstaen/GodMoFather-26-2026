@@ -57,6 +57,6 @@ public class GameManager : MonoBehaviour
     public  void EndGame()
     {
         Debug.LogWarning("End of the game");
-        _endScreen.ShowEndScreen();
+        _endScreen.PlayBSODVideo();
     }
 }
