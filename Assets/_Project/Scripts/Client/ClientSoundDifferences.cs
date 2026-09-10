@@ -1,7 +1,6 @@
 using PLIbox.Extensions;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClientSoundDifferences : MonoBehaviour
@@ -39,6 +38,16 @@ public class ClientSoundDifferences : MonoBehaviour
     {
         _soundData = InvalidSoundDiff;
         _soundPlayCoroutine = StartCoroutine(SoundPlayRoutine());
+    }
+
+    public void StopSoundEffect()
+    {
+        if(_soundPlayCoroutine != null)
+        {
+            StopCoroutine(_soundPlayCoroutine);
+            _soundPlayCoroutine = null;
+        }
+        _soundSource.Stop();
     }
 
     private IEnumerator SoundPlayRoutine()

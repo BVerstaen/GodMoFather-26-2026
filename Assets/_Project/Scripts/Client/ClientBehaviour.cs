@@ -64,6 +64,10 @@ public class ClientBehaviour : MonoBehaviour
 
     public void Move(bool IsEntry, bool accepted = true)
     {
+        //Shut up if goes out
+        if (!IsEntry)
+            _soundAnomalies.StopSoundEffect();
+
         StartCoroutine(MoveClient(IsEntry, accepted));
     }
 

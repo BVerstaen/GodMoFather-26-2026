@@ -1725,6 +1725,7 @@ MonoBehaviour:
     value: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   _symbolPrefab: {fileID: 2170616038094381978, guid: 033d2c78dba6ab94c9a6f78d5fa5782b, type: 3}
   _symbolParent: {fileID: 1852191536}
+  _ghostAudioSource: {fileID: 744657573}
 --- !u!4 &744657572
 Transform:
   m_ObjectHideFlags: 0
