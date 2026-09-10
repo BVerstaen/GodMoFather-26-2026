@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        _clientSpawner.GenerateNewClient();
+        _clientSpawner.GenerateNewClient(isAccepted);
     }
 
     private void StartVictoryButton()

@@ -15,6 +15,7 @@ public class ClientBehaviour : MonoBehaviour
 
     [Header("Movements")]
     [SerializeField] private float _moveDuration = 2f;
+    [SerializeField] private float _fadeInDuration = 0.3f;
 
     private float _gameWidth;
 
@@ -61,12 +62,12 @@ public class ClientBehaviour : MonoBehaviour
 
     public void TriggerClientDialog() => _clientDialog.PlayDialog(_fakeClientSO ? _fakeClientSO.InvalidDialog : null);
 
-    public void Move(bool IsEntry)
+    public void Move(bool IsEntry, bool accepted = true)
     {
-        StartCoroutine(MoveClient(IsEntry));
+        StartCoroutine(MoveClient(IsEntry, accepted));
     }
 
-    private IEnumerator MoveClient(bool IsEntry)
+    private IEnumerator MoveClient(bool IsEntry, bool accepted = true)
     {
         if (ClientPlacementPoint.Instance == null)
         {
@@ -74,17 +75,30 @@ public class ClientBehaviour : MonoBehaviour
             yield break;
         }
 
+        yield return new WaitForSeconds(0.6f);
+
         HasDoneMoving = false;
         Transform ClientTargetPoint = ClientPlacementPoint.Instance.transform;
 
         float leftX = Camera.main.transform.position.x - _gameWidth;
         float rightX = Camera.main.transform.position.x + _gameWidth;
 
-        float startingX = IsEntry ? leftX : ClientTargetPoint.position.x;
-        Vector2 startPoint = new Vector2(startingX, ClientTargetPoint.position.y);
+        Vector2 startPoint;
 
-        float targetX = IsEntry ? ClientTargetPoint.position.x : rightX;
+
+        startPoint = ClientTargetPoint.position;
+
+        float targetX = accepted ? leftX : rightX;
         Vector2 targetPoint = new Vector2(targetX, ClientTargetPoint.position.y);
+
+        // arrivée
+        SpriteRenderer visual = GetComponentInChildren<SpriteRenderer>();
+        Vector3 startingScale = new Vector3(transform.localScale.x - 0.2f, transform.localScale.x - 0.2f, transform.localScale.x - 0.2f);
+        Vector3 targetScale = transform.localScale;
+
+
+        if (IsEntry)
+            transform.position = startPoint;
 
         float time = 0;
         while (time < _moveDuration)
@@ -92,7 +106,23 @@ public class ClientBehaviour : MonoBehaviour
             time += Time.deltaTime;
             float t = time / _moveDuration;
 
-            transform.position = Vector2.Lerp(startPoint, targetPoint, t);
+            if (IsEntry && time < _fadeInDuration)
+            {
+                float d = time / _fadeInDuration;
+
+                if (visual != null)
+                {
+                    Color c = visual.color;
+                    c.a = Mathf.Lerp(0, 1, d);
+                    visual.color = c;
+                }
+                transform.localScale = Vector3.Lerp(startingScale, targetScale, d);
+            }
+            else if (!IsEntry)
+            {
+                transform.position = Vector2.Lerp(startPoint, targetPoint, t);
+            }
+ 
 
             yield return null;
         }
