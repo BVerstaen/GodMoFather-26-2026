@@ -97,7 +97,6 @@ public class ClientBehaviour : MonoBehaviour
         Vector2 targetPoint = new Vector2(targetX, ClientTargetPoint.position.y);
 
         // arrivée
-        SpriteRenderer visual = GetComponentInChildren<SpriteRenderer>();
         Vector3 startingScale = new Vector3(transform.localScale.x - 0.2f, transform.localScale.x - 0.2f, transform.localScale.x - 0.2f);
         Vector3 targetScale = transform.localScale;
 
@@ -120,12 +119,7 @@ public class ClientBehaviour : MonoBehaviour
             {
                 float d = time / _fadeInDuration;
 
-                if (visual != null)
-                {
-                    Color c = visual.color;
-                    c.a = Mathf.Lerp(0, 1, d);
-                    visual.color = c;
-                }
+                ChangeAlpha(Mathf.Lerp(0, 1, d));
                 transform.localScale = Vector3.Lerp(startingScale, targetScale, d);
             }
             else if (!IsEntry)
@@ -147,6 +141,14 @@ public class ClientBehaviour : MonoBehaviour
                 Destroy(gameObject);
             else
                 TriggerClientDialog();
+        }
+
+        void ChangeAlpha(float alpha)
+        {
+            SpriteRenderer visual = GetComponentInChildren<SpriteRenderer>();
+            Color c = visual.color;
+            c.a = 1;
+            visual.color = c;
         }
     }
 }
