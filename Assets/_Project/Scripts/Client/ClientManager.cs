@@ -39,6 +39,9 @@ public class ClientManager : MonoBehaviour
     [Button("DEBUG - Generate new client")]
     public void GenerateNewClient(bool wasAccepted = true, bool decreaseClient = false)
     {
+        if (GameManager.IsEndOfGame)
+            return;
+
         //Kill current client
         if (_currentClient != null)
         {

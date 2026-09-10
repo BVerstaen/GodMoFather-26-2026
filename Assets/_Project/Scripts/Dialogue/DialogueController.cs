@@ -71,6 +71,9 @@ public class DialogueController : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        if (GameManager.IsEndOfGame)
+            return;
+
         if (_currentCoroutine != null)
         {
             StopCoroutine(_currentCoroutine);

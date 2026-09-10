@@ -55,7 +55,7 @@ public class ClientBehaviour : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (PauseManager.IsPaused)
+        if (PauseManager.IsPaused || GameManager.IsEndOfGame)
             return;
 
         TriggerClientDialog();

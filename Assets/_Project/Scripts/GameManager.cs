@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int _GameTime;
     private float _currentTimer;
-    private bool isEndOfGame = false;
+
+    public static bool IsEndOfGame { get; private set; }
 
     private void OnEnable()
     {
@@ -32,14 +33,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isEndOfGame)
+        if (IsEndOfGame)
             return;
 
 
         if (_currentTimer <= 0)
         {
             StartVictoryButton();
-            isEndOfGame = true;
+            IsEndOfGame = true;
         }
         if (!PauseManager.IsPaused)
         {
@@ -57,7 +58,9 @@ public class GameManager : MonoBehaviour
 
     public void ResolveClient(bool isAccepted)
     {
-        if(_clientSpawner.CurrentClient == null)
+        if (IsEndOfGame)
+            return;
+        if (_clientSpawner.CurrentClient == null)
             return;
         if (!_clientSpawner.CurrentClient.HasDoneMoving)
             return;
