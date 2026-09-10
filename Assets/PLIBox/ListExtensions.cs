@@ -15,7 +15,7 @@ namespace PLIbox.Extensions
         public static T GetRandomItem<T>(this IList<T> list)
         {
             AssertList(list);
-            return list[Random.Range(0, list.Count - 1)];
+            return list[Random.Range(0, list.Count)];
         }
 
         public static T GetFirstItem<T>(this IList<T> list)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfccee14f77eec146bcaa76da6d90dda, type: 3}
   m_Name: GobelinFakeClient
   m_EditorClassIdentifier: Assembly-CSharp::FakeClientSO
-  InvalidVisual: {fileID: 21300000, guid: 865d20a93854ec3488a346f7b2f459ae, type: 3}
+  InvalidVisual: {fileID: 21300000, guid: 538e0e6c484458442a86e2a33306a125, type: 3}
   InvalidSound:
     Sound: {fileID: 8300000, guid: 0a35bbb987bc341439d5b4977a85ee78, type: 3}
     DiffBetweenSound: 3

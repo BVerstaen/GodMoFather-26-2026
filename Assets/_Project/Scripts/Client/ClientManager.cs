@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using System;
+using Random = UnityEngine.Random;
 
 public class ClientManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class ClientManager : MonoBehaviour
     private bool _hasReachedLimit;
     private int _clientCount;
     private ClientBehaviour _currentClient;
+    private int _previousClientIndex = -1;
 
     public Action<int /*client count*/> OnNewClient;
     public Action OnOutOfClient;
@@ -54,7 +56,12 @@ public class ClientManager : MonoBehaviour
         }
 
         //Create new client
-        _currentClient = Instantiate(_clientPrefab.GetRandomItem(), _spawnPoint);
+        int foundIndex = Random.Range(0, _clientPrefab.Count);
+        while(_previousClientIndex == foundIndex)
+            foundIndex = Random.Range(0, _clientPrefab.Count);
+        _previousClientIndex = foundIndex;
+
+        _currentClient = Instantiate(_clientPrefab[foundIndex], _spawnPoint);
         _currentClient.Move(true);
         OnNewClient?.Invoke(_clientCount);
     }
