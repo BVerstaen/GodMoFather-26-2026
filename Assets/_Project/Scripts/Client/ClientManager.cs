@@ -54,6 +54,7 @@ public class ClientManager : MonoBehaviour
             print("No more clients");
             OnOutOfClient?.Invoke();
             _hasReachedLimit = true;
+            return;
         }
 
         //Create new client
