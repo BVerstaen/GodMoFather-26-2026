@@ -20,6 +20,12 @@ public class ClientBehaviour : MonoBehaviour
 
     private FakeClientSO _fakeClientSO = null;
 
+    public bool HasDoneMoving
+    {
+        get;
+        private set;
+    }
+
     public bool IsFakeClient
     {
         get;
@@ -68,6 +74,7 @@ public class ClientBehaviour : MonoBehaviour
             yield break;
         }
 
+        HasDoneMoving = false;
         Transform ClientTargetPoint = ClientPlacementPoint.Instance.transform;
 
         float leftX = Camera.main.transform.position.x - _gameWidth;
@@ -93,6 +100,7 @@ public class ClientBehaviour : MonoBehaviour
 
         void EndAnimation()
         {
+            HasDoneMoving = true;
             if (!IsEntry)
                 Destroy(gameObject);
             else

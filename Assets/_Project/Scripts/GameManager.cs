@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     {
         if(_clientSpawner.CurrentClient == null)
             return;
+        if (!_clientSpawner.CurrentClient.HasDoneMoving)
+            return;
 
         if(_clientSpawner.CurrentClient.IsFakeClient != isAccepted)
         {
