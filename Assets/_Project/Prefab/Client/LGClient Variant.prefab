@@ -15,15 +15,15 @@ PrefabInstance:
     - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _soundDataList.Array.data[0].Sound
       value: 
-      objectReference: {fileID: 8300000, guid: 02604e99d1413e040943f0e34deb0866, type: 3}
+      objectReference: {fileID: 8300000, guid: 025d7c12b154daa4f9b2254d9aa14ad4, type: 3}
     - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _soundDataList.Array.data[1].Sound
       value: 
-      objectReference: {fileID: 8300000, guid: 2ad27e4a55500b245a0b549b5888eef1, type: 3}
+      objectReference: {fileID: 8300000, guid: 15d450af4206b504297976cbe23e094c, type: 3}
     - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _soundDataList.Array.data[2].Sound
       value: 
-      objectReference: {fileID: 8300000, guid: f5df16c697375a14c8b372b861756f3c, type: 3}
+      objectReference: {fileID: 8300000, guid: e42a2a9011dbb5f4e8223425c95207f7, type: 3}
     - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _soundDataList.Array.data[0].DiffBetweenSound
       value: 3
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7589658540997800083, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_Name
-      value: MummyClient Variant
+      value: LGClient Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_LocalPosition.x
