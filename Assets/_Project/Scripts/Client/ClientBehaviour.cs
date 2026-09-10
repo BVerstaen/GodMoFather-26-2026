@@ -75,7 +75,7 @@ public class ClientBehaviour : MonoBehaviour
             yield break;
         }
 
-        yield return new WaitForSeconds(0.6f);
+        //yield return new WaitForSeconds(0.6f);
 
         HasDoneMoving = false;
         Transform ClientTargetPoint = ClientPlacementPoint.Instance.transform;
@@ -106,6 +106,8 @@ public class ClientBehaviour : MonoBehaviour
             time += Time.deltaTime;
             float t = time / _moveDuration;
 
+            
+
             if (IsEntry && time < _fadeInDuration)
             {
                 float d = time / _fadeInDuration;
@@ -122,7 +124,9 @@ public class ClientBehaviour : MonoBehaviour
             {
                 transform.position = Vector2.Lerp(startPoint, targetPoint, t);
             }
- 
+            else if (IsEntry && time >= _fadeInDuration)
+                EndAnimation();
+
 
             yield return null;
         }
