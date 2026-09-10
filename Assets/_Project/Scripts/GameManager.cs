@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -9,17 +10,43 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EndScrenUI _endScreen;
     [SerializeField] private WingedVictory _victoryButton;
     [SerializeField] private DefeatPanel _defeatPanel;
+    [SerializeField] private TextMeshProUGUI _timerText;
+    [SerializeField] private TextMeshProUGUI _scoreText;
 
     [ReadOnly][SerializeField] private int _currentScore;
 
+    [SerializeField] private int _GameTime;
+    private float _currentTimer;
+    private bool isEndOfGame = false;
+
     private void OnEnable()
     {
+        _currentTimer = _GameTime;
         _clientSpawner.OnOutOfClient += StartVictoryButton;
     }
 
     private void OnDisable()
     {
         _clientSpawner.OnOutOfClient -= StartVictoryButton;
+    }
+
+    private void Update()
+    {
+        if (isEndOfGame)
+            return;
+
+
+        if (_currentTimer <= 0)
+        {
+            StartVictoryButton();
+            isEndOfGame = true;
+        }
+        if (!PauseManager.IsPaused)
+        {
+            _currentTimer -= Time.deltaTime;
+            _timerText.text = ((int)_currentTimer).ToString();
+        }
+           
     }
 
     private void Start()
@@ -38,7 +65,10 @@ public class GameManager : MonoBehaviour
 
         bool isValid = _clientSpawner.CurrentClient.IsFakeClient != isAccepted;
         if (isValid)
+        {
             _currentScore++;
+            _scoreText.text = _currentScore.ToString();
+        }
         else
         {
             _defeatPanel.DisplayDefeatPanel(_clientSpawner.CurrentClient.IsFakeClient && isAccepted);
