@@ -45,6 +45,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "GhostInteraction_4",
+                    "type": "Button",
+                    "id": "53a6bfe0-fa08-4f05-90ea-8bc939e8a720",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -177,6 +187,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "GhostInteraction_3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ac8c5598-3812-4ee3-a8e2-6827ade6ad0d",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GhostInteraction_4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

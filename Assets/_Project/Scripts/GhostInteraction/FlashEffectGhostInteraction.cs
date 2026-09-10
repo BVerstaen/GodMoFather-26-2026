@@ -12,6 +12,10 @@ public class FlashEffectGhostInteraction : MonoBehaviour
     [SerializeField] private AnimationCurve _flashCurve;
     [SerializeField] private float _flashTime;
 
+    [Header("Darken")]
+    [SerializeField] private AnimationCurve _darkenCurve;
+    [SerializeField] private float _darkenTime;
+
     private bool _isFlashing = false;
     private Coroutine _flashCoroutine;
 
@@ -21,18 +25,27 @@ public class FlashEffectGhostInteraction : MonoBehaviour
         if (_isFlashing)
             return;
 
-        _flashCoroutine = StartCoroutine(FlashEffectRoutine());
+        _flashCoroutine = StartCoroutine(FlashEffectRoutine(Color.white, _flashCurve, _flashTime));
     }
 
-    private IEnumerator FlashEffectRoutine()
+    [Button("DEBUG - Darken screen")]
+    public void StartDarkenEffect()
+    {
+        if (_isFlashing)
+            return;
+
+        _flashCoroutine = StartCoroutine(FlashEffectRoutine(Color.black, _darkenCurve, _darkenTime));
+    }
+
+    private IEnumerator FlashEffectRoutine(Color baseColor, AnimationCurve curve, float time)
     {
         _isFlashing = true;
         float timeElapsed = 0.0f;
-        Color flashColor = Color.white;
+        Color flashColor = baseColor;
         _flashEffectImage.gameObject.SetActive(true);
-        while (timeElapsed <= _flashTime)
+        while (timeElapsed <= time)
         {
-            flashColor.a = _flashCurve.Evaluate(timeElapsed / _flashTime);
+            flashColor.a = curve.Evaluate(timeElapsed / time);
             _flashEffectImage.color = flashColor;
             timeElapsed += Time.deltaTime;
             yield return null;
