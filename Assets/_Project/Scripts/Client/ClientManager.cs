@@ -35,7 +35,7 @@ public class ClientManager : MonoBehaviour
     }
 
     [Button("DEBUG - Generate new client")]
-    public void GenerateNewClient()
+    public void GenerateNewClient(bool wasAccepted = true)
     {
         if (_clientCount <= 0 && !_hasReachedLimit)
         {
@@ -49,7 +49,7 @@ public class ClientManager : MonoBehaviour
         if (_currentClient != null)
         {
             //Destroy(_currentClient.gameObject);
-            _currentClient.Move(false);
+            _currentClient.Move(false, wasAccepted);
             _currentClient = null;
         }
 
