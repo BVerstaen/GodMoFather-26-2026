@@ -64,6 +64,14 @@ PrefabInstance:
       propertyPath: '_fakeClientList.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: a53d797cf4ebee84f955758c33b28d15, type: 2}
+    - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _waveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _waveAmplitude
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 809.1077
