@@ -64,6 +64,22 @@ PrefabInstance:
       propertyPath: '_fakeClientList.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: a53d797cf4ebee84f955758c33b28d15, type: 2}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[0]'
+      value: "Je viens depuis l\u2019\xC9gypte pour cette f\xEAte et je dois quand m\xEAme passer la douane ??? Quelle blague !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[1]'
+      value: "Le manoir est beau par contre l\u2019odeur\u2026 Dracula se laisse aller, ses f\xEAtes sont de moins en moins bien !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[2]'
+      value: "Hmph\u2026 tu as une sacr\xE9e mine, m\xEAme pour un immortel."
+      objectReference: {fileID: 0}
     - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _waveSpeed
       value: 2
