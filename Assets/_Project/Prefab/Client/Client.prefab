@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 6554244259265893666}
   - component: {fileID: 7786575241704558307}
   - component: {fileID: 659517565273562888}
+  - component: {fileID: 8670131256598338774}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -253,6 +254,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &8670131256598338774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059985535151629365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d86041a8cb0a84e94da733bcbcc1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClientAnimations
+  _graphicsSprite: {fileID: 6554244259265893666}
+  _waveSpeed: 3
+  _waveAmplitude: 0.02
 --- !u!1 &7243990897190372358
 GameObject:
   m_ObjectHideFlags: 0
