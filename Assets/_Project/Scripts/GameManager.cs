@@ -36,10 +36,9 @@ public class GameManager : MonoBehaviour
             return;
 
 
-        if(_clientSpawner.CurrentClient.IsFakeClient != isAccepted)
-        {
+        bool isValid = _clientSpawner.CurrentClient.IsFakeClient != isAccepted;
+        if (isValid)
             _currentScore++;
-        }
         else if (_clientSpawner.CurrentClient.IsFakeClient && isAccepted)
         {
             // client humain accepté 
@@ -49,7 +48,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        _clientSpawner.GenerateNewClient(isAccepted);
+        _clientSpawner.GenerateNewClient(isAccepted, isValid);
     }
 
     private void StartVictoryButton()
