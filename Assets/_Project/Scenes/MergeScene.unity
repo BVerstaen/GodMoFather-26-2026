@@ -503,10 +503,10 @@ MonoBehaviour:
   _endScreen: {fileID: 655782187}
   _victoryButton: {fileID: 2019620301}
   _defeatPanel: {fileID: 531204450}
-  _timerText: {fileID: 1346494584}
+  _timervisual: {fileID: 1346494586}
   _scoreText: {fileID: 1702921659}
   _currentScore: 0
-  _GameTime: 4
+  _GameTime: 120
 --- !u!4 &106762602
 Transform:
   m_ObjectHideFlags: 0
@@ -3473,6 +3473,7 @@ GameObject:
   - component: {fileID: 1346494583}
   - component: {fileID: 1346494585}
   - component: {fileID: 1346494584}
+  - component: {fileID: 1346494586}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -3599,6 +3600,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346494582}
   m_CullTransparentMesh: 1
+--- !u!114 &1346494586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346494582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 995172cb1fca60f428ed6fc546b930ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimerVisual
+  _timerText: {fileID: 1346494584}
+  _lastSecondsWarning: 10
 --- !u!1 &1369954502
 GameObject:
   m_ObjectHideFlags: 0
