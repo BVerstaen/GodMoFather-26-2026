@@ -16,6 +16,7 @@ public class ClientBehaviour : MonoBehaviour
     [Header("Movements")]
     [SerializeField] private float _moveDuration = 2f;
     [SerializeField] private float _fadeInDuration = 0.3f;
+    [SerializeField] private float _timeBetweenCustomers = 0.5f;
 
     private float _gameWidth;
 
@@ -102,7 +103,10 @@ public class ClientBehaviour : MonoBehaviour
 
 
         if (IsEntry)
+        {
             transform.position = startPoint;
+            yield return new WaitForSeconds(_timeBetweenCustomers);
+        }
 
         float time = 0;
         while (time < _moveDuration)
