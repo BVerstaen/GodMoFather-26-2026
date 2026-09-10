@@ -1,18 +1,19 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DefeatPanel : MonoBehaviour
 {
-    [SerializeField] private string _onHumanEnterText;
-    [SerializeField] private string _onMonsterEjectedText;
+    [SerializeField] private Sprite _onHumanEnter;
+    [SerializeField] private Sprite _onMonsterEjected;
 
-    [SerializeField] private TextMeshProUGUI _defeatText;
+    [SerializeField] private Image _defeatImg;
     [SerializeField] private Animator _defeatAnimator;
 
 
     public void DisplayDefeatPanel(bool HumanEnter)
     {
-        _defeatText.text = HumanEnter ? _onHumanEnterText : _onMonsterEjectedText;
+        _defeatImg.sprite = HumanEnter ? _onHumanEnter : _onMonsterEjected;
 
         _defeatAnimator.SetTrigger("display");
     }

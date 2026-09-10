@@ -378,6 +378,7 @@ MonoBehaviour:
   _fakeClientList: []
   _moveDuration: 2
   _fadeInDuration: 0.3
+  _timeBetweenCustomers: 0.7
 --- !u!54 &7385374060691771746
 Rigidbody:
   m_ObjectHideFlags: 0
