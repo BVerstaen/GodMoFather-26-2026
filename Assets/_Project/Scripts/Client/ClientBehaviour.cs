@@ -93,7 +93,7 @@ public class ClientBehaviour : MonoBehaviour
 
         startPoint = ClientTargetPoint.position;
 
-        float targetX = accepted ? leftX : rightX;
+        float targetX = accepted ? rightX : leftX;
         Vector2 targetPoint = new Vector2(targetX, ClientTargetPoint.position.y);
 
         // arrivée
