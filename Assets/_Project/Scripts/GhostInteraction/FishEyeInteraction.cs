@@ -11,7 +11,6 @@ public class FishEyeInteraction : MonoBehaviour
     [SerializeField] private AnimationCurve _fishEyeCurve;
     [SerializeField] private float _fishEyeDuration;
 
-    private VolumeProfile _volumeProfil;
     private LensDistortion _lensDistortionComponent;
     private bool _isFishing;
 
@@ -20,12 +19,14 @@ public class FishEyeInteraction : MonoBehaviour
     private void Awake()
     {
         var volume = GetComponent<Volume>();
-        _volumeProfil = volume.profile;
-        if (!_volumeProfil.TryGet(out _lensDistortionComponent))
+        if (!volume.profile.TryGet(out _lensDistortionComponent))
         {
+            print("Disabled fish eye");
             enabled = false;
             return;
         }
+        _lensDistortionComponent.intensity.value = 0;
+        _lensDistortionComponent.intensity.overrideState = true;
     }
 
     [Button("DEBUG - FishEye effect")]
@@ -33,7 +34,7 @@ public class FishEyeInteraction : MonoBehaviour
     {
         if (_isFishing)
             return;
-             
+
         _fishEyeCoroutine = StartCoroutine(FishEyeRoutine());
     }
 
@@ -45,6 +46,7 @@ public class FishEyeInteraction : MonoBehaviour
         _lensDistortionComponent.intensity.value = _fishEyeCurve.Evaluate(0);
         while (timeElapsed <= _fishEyeDuration)
         {
+            _lensDistortionComponent.intensity.overrideState = true;
             _lensDistortionComponent.intensity.value = Mathf.Clamp01(_fishEyeCurve.Evaluate(timeElapsed / _fishEyeDuration));
             timeElapsed += Time.deltaTime;
             yield return new WaitForEndOfFrame();

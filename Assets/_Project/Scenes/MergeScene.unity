@@ -899,7 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39902695b2304dc49b546d0a2689dee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
-  _screenFade: {fileID: 0}
+  _screenFade: {fileID: 2138463159}
 --- !u!114 &270999455
 MonoBehaviour:
   m_ObjectHideFlags: 0
