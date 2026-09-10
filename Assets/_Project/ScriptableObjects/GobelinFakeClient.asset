@@ -17,4 +17,4 @@ MonoBehaviour:
     Sound: {fileID: 8300000, guid: 0a35bbb987bc341439d5b4977a85ee78, type: 3}
     DiffBetweenSound: 3
   InvalidDialog:
-  - Oh la la, je ne suis pas un humain !
+  - "Bonsoir, je peux rentrer ? C\u2019est juste moi, promis !"
