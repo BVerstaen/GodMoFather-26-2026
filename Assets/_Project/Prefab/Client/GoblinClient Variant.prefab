@@ -8,6 +8,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 92d235eafd58df945a34ea820d8fefe8, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 69495083521ff344ba26409a110c4e47, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: ae6601ddd50f792409dd87849a33dd73, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7589658540997800083, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_Name
       value: GoblinClient Variant
