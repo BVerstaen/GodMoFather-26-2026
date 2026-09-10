@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         if (!_clientSpawner.CurrentClient.HasDoneMoving)
             return;
 
+
         if(_clientSpawner.CurrentClient.IsFakeClient != isAccepted)
         {
             _currentScore++;
