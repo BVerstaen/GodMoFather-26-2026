@@ -13,6 +13,7 @@ public class FishEyeInteraction : MonoBehaviour
 
     private VolumeProfile _volumeProfil;
     private LensDistortion _lensDistortionComponent;
+    private bool _isFishing;
 
     private Coroutine _fishEyeCoroutine;
 
@@ -30,12 +31,16 @@ public class FishEyeInteraction : MonoBehaviour
     [Button("DEBUG - FishEye effect")]
     public void StartFishEyeEffect()
     {
+        if (_isFishing)
+            return;
+             
         _fishEyeCoroutine = StartCoroutine(FishEyeRoutine());
     }
 
     private IEnumerator FishEyeRoutine()
     {
         float timeElapsed = 0.0f;
+        _isFishing = true;
 
         _lensDistortionComponent.intensity.value = _fishEyeCurve.Evaluate(0);
         while (timeElapsed <= _fishEyeDuration)
@@ -45,5 +50,6 @@ public class FishEyeInteraction : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         _lensDistortionComponent.intensity.value = _fishEyeCurve.Evaluate(1);
+        _isFishing = false;
     }
 }

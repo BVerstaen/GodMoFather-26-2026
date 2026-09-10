@@ -1668,9 +1668,9 @@ MonoBehaviour:
     value:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1748149864}
-          m_TargetAssemblyTypeName: ShakingCamInteraction, Assembly-CSharp
-          m_MethodName: PlayCameraShake
+        - m_Target: {fileID: 1339126223}
+          m_TargetAssemblyTypeName: FishEyeInteraction, Assembly-CSharp
+          m_MethodName: StartFishEyeEffect
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
