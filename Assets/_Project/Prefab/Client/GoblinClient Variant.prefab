@@ -60,6 +60,22 @@ PrefabInstance:
       propertyPath: '_fakeClientList.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 3947583d9d3e57f4fa252dbc5558c85b, type: 2}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[0]'
+      value: "Salut ! Sympa la f\xEAte, \xE7a d\xE9range si je ram\xE8ne mes 20 fr\xE8res, 20 s\u0153urs et 52 cousins ? J\u2019ai aussi des ni\xE8ces, neveux, des oncles et tantes qui peuvent venir apr\xE8s, et leurs amis !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[1]'
+      value: "Salut salut \xE7a va ??? J\u2019aime trop faire la f\xEAte, vraiment c\u2019est ma passion, y a de \xE7a 500 ans mon arri\xE8re arri\xE8re arri\xE8re arri\xE8re grand-p\xE8re a invent\xE9 le terme \xAB f\xEAte \xBB quand il organisait des gros regroupements de goblins pour voler de l\u2019or a des groupes de lutins."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[2]'
+      value: "Ah ! Dracula a besoin de videurs maintenant ?! Franchement je suis un peu d\xE9\xE7u. Fut un temp ou il \xE9tait une figure respect\xE9e qui inspirais tellement la peur qu\u2019aucun humain n\u2019aurai essay\xE9 de rentrer ici en secret !"
+      objectReference: {fileID: 0}
     - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _waveSpeed
       value: 10

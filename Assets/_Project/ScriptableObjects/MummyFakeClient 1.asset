@@ -17,4 +17,4 @@ MonoBehaviour:
     Sound: {fileID: 8300000, guid: 3301c6682619faa409e1b4a14e185bf9, type: 3}
     DiffBetweenSound: 3
   InvalidDialog:
-  - Oh la la, je ne suis pas un humain !
+  - "Ahh Dracula\u2026 \xE7a faisais si longtemps mon vieil ami."

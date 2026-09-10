@@ -17,4 +17,4 @@ MonoBehaviour:
     Sound: {fileID: 8300000, guid: 1fbe78f9bc6423044969d02a7b3ec4c0, type: 3}
     DiffBetweenSound: 3
   InvalidDialog:
-  - Oh la la, je ne suis pas un humain !
+  - "Bonsoir\u2026. Je viens pour la f\xEAte\u2026. D\xE9sol\xE9 de n\u2019avoir rien apport\xE9, il n\u2019y a pas de poches dans le drap\u2026"

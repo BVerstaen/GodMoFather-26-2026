@@ -60,6 +60,22 @@ PrefabInstance:
       propertyPath: '_fakeClientList.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 963b212620e33a04cbf922f80440260d, type: 2}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[0]'
+      value: "Bonsooooir\u2026 je fais l\u2019effooooort de passer par l\u2019entr\xE9e au lieu de me faufiler au travers d\u2019un mur de dehooooors, c\u2019est d\xE9j\xE0 assez comme preuve nooooon ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[1]'
+      value: "Quel bhooooooneur d\u2019avoir \xE9t\xE9 invit\xE9. D\u2019habitude on m\u2019oublie\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[2]'
+      value: "\u2026Bonsoir\u2026. J\u2019appooooorte de l\u2019ectoplasme comestible."
+      objectReference: {fileID: 0}
     - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 809.1077
