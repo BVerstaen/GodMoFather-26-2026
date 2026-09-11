@@ -36,6 +36,14 @@ PrefabInstance:
       propertyPath: _soundDataList.Array.data[2].DiffBetweenSound
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 659517565273562888, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 865d20a93854ec3488a346f7b2f459ae, type: 3}
+    - target: {fileID: 659517565273562888, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04a2c224d35411b4bba6871115690466, type: 2}
     - target: {fileID: 7589658540997800083, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_Name
       value: GhostClient Variant
