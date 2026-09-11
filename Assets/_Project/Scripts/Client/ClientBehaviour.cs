@@ -5,10 +5,13 @@ using System.Collections;
 
 public class ClientBehaviour : MonoBehaviour
 {
-    [Header("Anomalies")]
+    [Header("References")]
     [SerializeField] private ClientVisualAnomalies _visualAnomalies;
     [SerializeField] private ClientSoundDifferences _soundAnomalies;
     [SerializeField] private ClientDialog _clientDialog;
+
+    [Header("Anomalies")]
+    [SerializeField][Range(0, 1)] private float _randomAnomalyProba;
 
     [Space(5)]
     [SerializeField] private List<FakeClientSO> _fakeClientList;
@@ -37,7 +40,7 @@ public class ClientBehaviour : MonoBehaviour
     private void Awake()
     {
         //Choose if is fake or not
-        IsFakeClient = RandomExtensions.RandomBool();
+        IsFakeClient = Random.value <= _randomAnomalyProba;
         if (IsFakeClient)
             _fakeClientSO = _fakeClientList.GetRandomItem();
 
@@ -127,12 +130,17 @@ public class ClientBehaviour : MonoBehaviour
                 transform.position = Vector2.Lerp(startPoint, targetPoint, t);
             }
             else if (IsEntry && time >= _fadeInDuration)
+            {
                 EndAnimation();
+                break;
+            }
 
 
             yield return null;
         }
-        EndAnimation();
+
+        if (!IsEntry)
+            EndAnimation();
 
         void EndAnimation()
         {
@@ -150,5 +158,8 @@ public class ClientBehaviour : MonoBehaviour
             c.a = 1;
             visual.color = c;
         }
+
+
     }
+
 }

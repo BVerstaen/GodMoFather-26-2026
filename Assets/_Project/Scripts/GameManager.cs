@@ -11,14 +11,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WingedVictory _victoryButton;
     [SerializeField] private DefeatPanel _defeatPanel;
     [SerializeField] private TimerVisual _timervisual;
-    [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private ScoreVisual _scoreVisual;
+    [SerializeField] private WarningVignette _warningVignette;
+    [SerializeField] private float _startPusleTime;
+
 
     [ReadOnly][SerializeField] private int _currentScore;
+    private bool _pulseStarted = false;
 
     [SerializeField] private int _GameTime;
     private float _currentTimer;
 
     public static bool IsEndOfGame { get; private set; }
+
+    private void Awake()
+    {
+        IsEndOfGame = false;
+    }
 
     private void OnEnable()
     {
@@ -45,6 +54,12 @@ public class GameManager : MonoBehaviour
         if (!PauseManager.IsPaused)
         {
             _currentTimer -= Time.deltaTime;
+            if (_currentTimer <= _startPusleTime && !_pulseStarted)
+            {
+                _warningVignette.StartPulse();
+                _pulseStarted = true;
+            }
+
             _timervisual.UpdateTimer(_currentTimer);
         }
            
@@ -70,7 +85,7 @@ public class GameManager : MonoBehaviour
         if (isValid)
         {
             _currentScore++;
-            _scoreText.text = _currentScore.ToString();
+            _scoreVisual.UpdateScore(_currentScore);
         }
         else
         {
