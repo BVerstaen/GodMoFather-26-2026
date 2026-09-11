@@ -505,6 +505,8 @@ MonoBehaviour:
   _defeatPanel: {fileID: 531204450}
   _timervisual: {fileID: 1346494586}
   _scoreVisual: {fileID: 1702921661}
+  _warningVignette: {fileID: 1339126224}
+  _startPusleTime: 15
   _currentScore: 0
   _GameTime: 120
 --- !u!4 &106762602
@@ -3229,6 +3231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339126221}
   - component: {fileID: 1339126222}
+  - component: {fileID: 1339126224}
   - component: {fileID: 1339126223}
   m_Layer: 0
   m_Name: Global Volume
@@ -3324,6 +3327,22 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 4
   _fishEyeDuration: 2
+--- !u!114 &1339126224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339126220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336cb4e38a2d1e64688af32d2f289dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WarningVignette
+  _pulseStartDuration: 1.5
+  _pulseMaxDuration: 0.3
+  _pulseAddIntensity: 0.5
+  _pulseDurationStep: 0.001
 --- !u!1 &1346494582
 GameObject:
   m_ObjectHideFlags: 0
