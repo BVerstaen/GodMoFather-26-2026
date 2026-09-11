@@ -158,5 +158,8 @@ public class ClientBehaviour : MonoBehaviour
             c.a = 1;
             visual.color = c;
         }
+
+
     }
+
 }

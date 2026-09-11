@@ -506,9 +506,9 @@ MonoBehaviour:
   _timervisual: {fileID: 1346494586}
   _scoreVisual: {fileID: 1702921661}
   _warningVignette: {fileID: 1339126224}
-  _startPusleTime: 15
+  _startPusleTime: 60
   _currentScore: 0
-  _GameTime: 120
+  _GameTime: 70
 --- !u!4 &106762602
 Transform:
   m_ObjectHideFlags: 0
@@ -3342,7 +3342,7 @@ MonoBehaviour:
   _pulseStartDuration: 1.5
   _pulseMaxDuration: 0.3
   _pulseAddIntensity: 0.5
-  _pulseDurationStep: 0.001
+  _pulseDurationStep: 0.02
 --- !u!1 &1346494582
 GameObject:
   m_ObjectHideFlags: 0
