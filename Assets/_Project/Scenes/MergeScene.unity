@@ -506,7 +506,7 @@ MonoBehaviour:
   _timervisual: {fileID: 1346494586}
   _scoreVisual: {fileID: 1702921661}
   _currentScore: 0
-  _GameTime: 120
+  _GameTime: 15
 --- !u!4 &106762602
 Transform:
   m_ObjectHideFlags: 0

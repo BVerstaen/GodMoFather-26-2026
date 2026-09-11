@@ -6,7 +6,7 @@ using UnityEngine;
 public class TimerVisual : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _timerText;
-    [SerializeField] private int _lastSecondsWarning = 11; 
+    [SerializeField] private int _lastSecondsWarning = 10; 
     [SerializeField] private float _bouceDuration = 0.3f;
     [SerializeField] private float _timeBtwBounce = 0.7f;
     [SerializeField] private float _add = 15;
@@ -15,6 +15,7 @@ public class TimerVisual : MonoBehaviour
 
     private void Awake()
     {
+        _timerText.gameObject.SetActive(false);
         _startingSize = _timerText.fontSize;
     }
 
@@ -23,10 +24,14 @@ public class TimerVisual : MonoBehaviour
         float min = _currentTimer / 60;
         float sec = _currentTimer % 60;
 
-        _timerText.text = (int)min + " : " + (int)sec;
+        if ((int)min <= 0)
+            _timerText.text = ((int)sec).ToString();
+        else 
+            _timerText.text = (int)min + " : " + (int)sec;
 
-        if (_currentTimer <= _lastSecondsWarning && !_isInWarning)
+        if ((int)_currentTimer <= _lastSecondsWarning && !_isInWarning)
         {
+            _timerText.gameObject.SetActive(true);
             _isInWarning = true;
 
             _timerText.color = Color.red;
