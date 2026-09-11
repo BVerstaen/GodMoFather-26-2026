@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
 
     public static bool IsEndOfGame { get; private set; }
 
+    private void Awake()
+    {
+        IsEndOfGame = false;
+    }
+
     private void OnEnable()
     {
         _currentTimer = _GameTime;
