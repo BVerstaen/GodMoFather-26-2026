@@ -12,8 +12,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DefeatPanel _defeatPanel;
     [SerializeField] private TimerVisual _timervisual;
     [SerializeField] private ScoreVisual _scoreVisual;
+    [SerializeField] private WarningVignette _warningVignette;
+    [SerializeField] private float _startPusleTime;
+
 
     [ReadOnly][SerializeField] private int _currentScore;
+    private bool _pulseStarted = false;
 
     [SerializeField] private int _GameTime;
     private float _currentTimer;
@@ -45,6 +49,12 @@ public class GameManager : MonoBehaviour
         if (!PauseManager.IsPaused)
         {
             _currentTimer -= Time.deltaTime;
+            if (_currentTimer <= _startPusleTime && !_pulseStarted)
+            {
+                _warningVignette.StartPulse();
+                _pulseStarted = true;
+            }
+
             _timervisual.UpdateTimer(_currentTimer);
         }
            
