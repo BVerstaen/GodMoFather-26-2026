@@ -15,7 +15,9 @@ public class SymbolAnimation : MonoBehaviour
     public void Init(Sprite symbol)
     {
         _symbolIMG.sprite = symbol;
-        _audioSource.PlayOneShot(_symbolAudio);
+        if (_symbolAudio != null) 
+            _audioSource.PlayOneShot(_symbolAudio);
+
         StartCoroutine(Animate());
     }
 
