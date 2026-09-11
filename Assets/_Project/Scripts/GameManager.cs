@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WingedVictory _victoryButton;
     [SerializeField] private DefeatPanel _defeatPanel;
     [SerializeField] private TimerVisual _timervisual;
-    [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private ScoreVisual _scoreVisual;
 
     [ReadOnly][SerializeField] private int _currentScore;
 
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         if (isValid)
         {
             _currentScore++;
-            _scoreText.text = _currentScore.ToString();
+            _scoreVisual.UpdateScore(_currentScore);
         }
         else
         {

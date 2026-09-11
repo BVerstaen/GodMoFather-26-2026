@@ -504,7 +504,7 @@ MonoBehaviour:
   _victoryButton: {fileID: 2019620301}
   _defeatPanel: {fileID: 531204450}
   _timervisual: {fileID: 1346494586}
-  _scoreText: {fileID: 1702921659}
+  _scoreVisual: {fileID: 1702921661}
   _currentScore: 0
   _GameTime: 120
 --- !u!4 &106762602
@@ -4705,6 +4705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702921658}
   - component: {fileID: 1702921660}
+  - component: {fileID: 1702921661}
   - component: {fileID: 1702921659}
   m_Layer: 5
   m_Name: Score
@@ -4786,8 +4787,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -4832,6 +4833,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702921657}
   m_CullTransparentMesh: 1
+--- !u!114 &1702921661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702921657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c75dccfb575bd545a006b06ebb337d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreVisual
+  _scoreText: {fileID: 1702921659}
+  _bouceDuration: 0.3
+  _add: 60
 --- !u!1 &1748149859
 GameObject:
   m_ObjectHideFlags: 0
