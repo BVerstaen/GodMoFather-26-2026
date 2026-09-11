@@ -47,6 +47,7 @@ public class ClientManager : MonoBehaviour
         {
             //Destroy(_currentClient.gameObject);
             _currentClient.Move(false, wasAccepted);
+            DialogueController.Instance.ClearDialogue();
             _currentClient = null;
         }
 

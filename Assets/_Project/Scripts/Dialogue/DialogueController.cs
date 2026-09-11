@@ -64,6 +64,17 @@ public class DialogueController : MonoBehaviour
         Display();
     }
 
+    public void ClearDialogue()
+    {
+        if (_currentCoroutine != null)
+        {
+            StopCoroutine(_currentCoroutine);
+            _currentCoroutine = null;
+        }
+        
+        dialogueText.text = "";
+    }
+
     private void Display()
     {
         _currentCoroutine = StartCoroutine(DisplayLine(_currentDialogue[_currentLineIndex]));
