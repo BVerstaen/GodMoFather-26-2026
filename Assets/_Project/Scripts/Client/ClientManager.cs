@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using System;
+using Random = UnityEngine.Random;
 
 public class ClientManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class ClientManager : MonoBehaviour
     private bool _hasReachedLimit;
     private int _clientCount;
     private ClientBehaviour _currentClient;
+    private int _previousClientIndex = -1;
 
     public Action<int /*client count*/> OnNewClient;
     public Action OnOutOfClient;
@@ -35,27 +37,43 @@ public class ClientManager : MonoBehaviour
     }
 
     [Button("DEBUG - Generate new client")]
-    public void GenerateNewClient()
+    public void GenerateNewClient(bool wasAccepted = true, bool decreaseClient = false)
     {
-        if (_clientCount <= 0 && !_hasReachedLimit)
-        {
-            print("No more clients");
-            OnOutOfClient?.Invoke();
-            _hasReachedLimit = true;
-        }
-        _clientCount--;
+        if (GameManager.IsEndOfGame)
+            return;
 
         //Kill current client
         if (_currentClient != null)
         {
             //Destroy(_currentClient.gameObject);
-            _currentClient.Move(false);
+            _currentClient.Move(false, wasAccepted);
             _currentClient = null;
         }
 
+        if (decreaseClient)
+            _clientCount--;
+        if (_clientCount <= 0 && !_hasReachedLimit)
+        {
+            print("No more clients");
+            OnOutOfClient?.Invoke();
+            _hasReachedLimit = true;
+            return;
+        }
+
         //Create new client
-        _currentClient = Instantiate(_clientPrefab.GetRandomItem(), _spawnPoint);
+        int foundIndex = Random.Range(0, _clientPrefab.Count);
+        while(_previousClientIndex == foundIndex)
+            foundIndex = Random.Range(0, _clientPrefab.Count);
+        _previousClientIndex = foundIndex;
+
+        _currentClient = Instantiate(_clientPrefab[foundIndex], _spawnPoint);
         _currentClient.Move(true);
         OnNewClient?.Invoke(_clientCount);
+    }
+
+    public void KillClient()
+    {
+        if (_currentClient != null)
+            Destroy(_currentClient.gameObject);
     }
 }

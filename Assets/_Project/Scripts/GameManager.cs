@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,18 +9,45 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ClientManager _clientSpawner;
     [SerializeField] private EndScrenUI _endScreen;
     [SerializeField] private WingedVictory _victoryButton;
-    [SerializeField] private GameObject _defeatPanel;
+    [SerializeField] private DefeatPanel _defeatPanel;
+    [SerializeField] private TimerVisual _timervisual;
+    [SerializeField] private TextMeshProUGUI _scoreText;
 
     [ReadOnly][SerializeField] private int _currentScore;
 
+    [SerializeField] private int _GameTime;
+    private float _currentTimer;
+
+    public static bool IsEndOfGame { get; private set; }
+
     private void OnEnable()
     {
+        _currentTimer = _GameTime;
         _clientSpawner.OnOutOfClient += StartVictoryButton;
     }
 
     private void OnDisable()
     {
         _clientSpawner.OnOutOfClient -= StartVictoryButton;
+    }
+
+    private void Update()
+    {
+        if (IsEndOfGame)
+            return;
+
+
+        if (_currentTimer <= 0)
+        {
+            StartVictoryButton();
+            IsEndOfGame = true;
+        }
+        if (!PauseManager.IsPaused)
+        {
+            _currentTimer -= Time.deltaTime;
+            _timervisual.UpdateTimer(_currentTimer);
+        }
+           
     }
 
     private void Start()
@@ -30,23 +58,26 @@ public class GameManager : MonoBehaviour
 
     public void ResolveClient(bool isAccepted)
     {
-        if(_clientSpawner.CurrentClient == null)
+        if (IsEndOfGame)
+            return;
+        if (_clientSpawner.CurrentClient == null)
+            return;
+        if (!_clientSpawner.CurrentClient.HasDoneMoving)
             return;
 
-        if(_clientSpawner.CurrentClient.IsFakeClient != isAccepted)
+
+        bool isValid = _clientSpawner.CurrentClient.IsFakeClient != isAccepted;
+        if (isValid)
         {
             _currentScore++;
+            _scoreText.text = _currentScore.ToString();
         }
-        else if (_clientSpawner.CurrentClient.IsFakeClient && isAccepted)
+        else
         {
-            // client humain accepté 
-            if (_defeatPanel.TryGetComponent(out Animator anim))
-            {
-                anim.SetTrigger("display");
-            }
+            _defeatPanel.DisplayDefeatPanel(_clientSpawner.CurrentClient.IsFakeClient && isAccepted);
         }
 
-        _clientSpawner.GenerateNewClient();
+        _clientSpawner.GenerateNewClient(isAccepted, isValid);
     }
 
     private void StartVictoryButton()
@@ -57,6 +88,6 @@ public class GameManager : MonoBehaviour
     public  void EndGame()
     {
         Debug.LogWarning("End of the game");
-        _endScreen.ShowEndScreen();
+        _endScreen.PlayBSODVideo();
     }
 }

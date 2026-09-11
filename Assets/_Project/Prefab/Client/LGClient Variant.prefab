@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7923961315465982764
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 025d7c12b154daa4f9b2254d9aa14ad4, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 15d450af4206b504297976cbe23e094c, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: e42a2a9011dbb5f4e8223425c95207f7, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589658540997800083, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_Name
+      value: LGClient Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 809.1077
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 382.42773
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}

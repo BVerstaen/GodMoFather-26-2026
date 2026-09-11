@@ -71,11 +71,16 @@ public class DialogueController : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        if (GameManager.IsEndOfGame)
+            return;
+
         if (_currentCoroutine != null)
         {
             StopCoroutine(_currentCoroutine);
             _currentCoroutine = null;
             dialogueText.text = _currentDialogue[_currentLineIndex];
+            IsInDialog = false;
+            OnDialogWriting?.Invoke((false, LetterGapTime));
         }
         else
         {
@@ -86,6 +91,7 @@ public class DialogueController : MonoBehaviour
                // UIAnimations.Instance.FadeIn(dialogueCG, DialoguePanelFadeDuration, false);
                 dialogueText.text = "";
                 IsInDialog = false;
+                OnDialogWriting?.Invoke((false, LetterGapTime));
             }
             else 
                 Display();

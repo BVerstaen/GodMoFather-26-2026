@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1407594998305315950
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 92d235eafd58df945a34ea820d8fefe8, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 69495083521ff344ba26409a110c4e47, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: ae6601ddd50f792409dd87849a33dd73, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589658540997800083, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_Name
+      value: GoblinClient Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _visualList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 330911cdb342891409f74a0a6aa63bf4, type: 3}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 538e0e6c484458442a86e2a33306a125, type: 3}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d122d58de89dee428b74ce10d8742f3, type: 3}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _fakeClientList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_fakeClientList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3947583d9d3e57f4fa252dbc5558c85b, type: 2}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[0]'
+      value: "Salut ! Sympa la f\xEAte, \xE7a d\xE9range si je ram\xE8ne mes 20 fr\xE8res, 20 s\u0153urs et 52 cousins ? J\u2019ai aussi des ni\xE8ces, neveux, des oncles et tantes qui peuvent venir apr\xE8s, et leurs amis !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[1]'
+      value: "Salut salut \xE7a va ??? J\u2019aime trop faire la f\xEAte, vraiment c\u2019est ma passion, y a de \xE7a 500 ans mon arri\xE8re arri\xE8re arri\xE8re arri\xE8re grand-p\xE8re a invent\xE9 le terme \xAB f\xEAte \xBB quand il organisait des gros regroupements de goblins pour voler de l\u2019or a des groupes de lutins."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[2]'
+      value: "Ah ! Dracula a besoin de videurs maintenant ?! Franchement je suis un peu d\xE9\xE7u. Fut un temp ou il \xE9tait une figure respect\xE9e qui inspirais tellement la peur qu\u2019aucun humain n\u2019aurai essay\xE9 de rentrer ici en secret !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _waveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _waveAmplitude
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 809.1077
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 382.42773
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}

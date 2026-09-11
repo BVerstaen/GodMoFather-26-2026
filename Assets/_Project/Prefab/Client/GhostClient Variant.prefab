@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8454185154349055
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: e2dd1998a84c4064c82257950739027e, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e2c47d7b62e9de48adcbcaf62cc6437, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: fad7f56bb13b38c4bbc5d1cc85fe84f3, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589658540997800083, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_Name
+      value: GhostClient Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _visualList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 865d20a93854ec3488a346f7b2f459ae, type: 3}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 53f29054540185f40a4e1cea77a99f23, type: 3}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: ec10f5220b5d2ed4ba1226b7c2052de2, type: 3}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _fakeClientList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_fakeClientList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 963b212620e33a04cbf922f80440260d, type: 2}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[0]'
+      value: "Bonsooooir\u2026 je fais l\u2019effooooort de passer par l\u2019entr\xE9e au lieu de me faufiler au travers d\u2019un mur de dehooooors, c\u2019est d\xE9j\xE0 assez comme preuve nooooon ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[1]'
+      value: "Quel bhooooooneur d\u2019avoir \xE9t\xE9 invit\xE9. D\u2019habitude on m\u2019oublie\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[2]'
+      value: "\u2026Bonsoir\u2026. J\u2019appooooorte de l\u2019ectoplasme comestible."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 809.1077
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 382.42773
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4143935568969695734
+--- !u!1001 &7923961315465982764
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,99 +10,95 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _soundDataList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _soundDataList.Array.data[0].Sound
       value: 
-      objectReference: {fileID: 8300000, guid: d74cce2f1d90e754fb5d8fd3eaa02816, type: 3}
+      objectReference: {fileID: 8300000, guid: 02604e99d1413e040943f0e34deb0866, type: 3}
     - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _soundDataList.Array.data[1].Sound
       value: 
-      objectReference: {fileID: 8300000, guid: 6392d833c6a7b6f4eb3d9fe60302ab05, type: 3}
+      objectReference: {fileID: 8300000, guid: 2ad27e4a55500b245a0b549b5888eef1, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: f5df16c697375a14c8b372b861756f3c, type: 3}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[0].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[1].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 421866565852843986, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _soundDataList.Array.data[2].DiffBetweenSound
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 659517565273562888, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 865d20a93854ec3488a346f7b2f459ae, type: 3}
-    - target: {fileID: 6554244259265893666, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554244259265893666, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554244259265893666, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554244259265893666, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: b2bc41e24d750f942a53ec156c8ca38e, type: 3}
     - target: {fileID: 7589658540997800083, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_Name
-      value: TestClient Variant
+      value: MummyClient Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _visualList.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: '_visualList.Array.data[0]'
       value: 
-      objectReference: {fileID: 21300000, guid: 865d20a93854ec3488a346f7b2f459ae, type: 3}
+      objectReference: {fileID: 21300000, guid: b2bc41e24d750f942a53ec156c8ca38e, type: 3}
     - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: '_visualList.Array.data[1]'
       value: 
-      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 12e08250b43051f49a4961280163c2c4, type: 3}
+    - target: {fileID: 7786575241704558307, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_visualList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f4d75dc02389ba42b236a9d73c9b9e8, type: 3}
     - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _fakeClientList.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: '_fakeClientList.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 8b42a9f9e2cd3db488dc5cbacf0427de, type: 2}
-    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: '_fakeClientList.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 2b0484c7b5cdafa4081dfe4c033145b0, type: 2}
+      objectReference: {fileID: 11400000, guid: a53d797cf4ebee84f955758c33b28d15, type: 2}
     - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: _validDialogs.Array.size
+      propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: _validDialogs.Array.data[1].DialogsList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: _validDialogs.Array.data[2].DialogsList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[0]'
-      value: "Bonjour, je suis un invit\xE9"
+      value: "Je viens depuis l\u2019\xC9gypte pour cette f\xEAte et je dois quand m\xEAme passer la douane ??? Quelle blague !"
       objectReference: {fileID: 0}
     - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: '_validDialogs.Array.data[1].DialogsList.Array.data[0]'
-      value: "Invit\xE9, je suis un bonjour"
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[1]'
+      value: "Le manoir est beau par contre l\u2019odeur\u2026 Dracula se laisse aller, ses f\xEAtes sont de moins en moins bien !"
       objectReference: {fileID: 0}
     - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
-      propertyPath: '_validDialogs.Array.data[2].DialogsList.Array.data[0]'
-      value: "Invit\xE9, je suis un bonjour"
+      propertyPath: '_validDialogs.Array.data[0].DialogsList.Array.data[2]'
+      value: "Hmph\u2026 tu as une sacr\xE9e mine, m\xEAme pour un immortel."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _waveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670131256598338774, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: _waveAmplitude
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 809.1077
       objectReference: {fileID: 0}
     - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 382.42773
       objectReference: {fileID: 0}
     - target: {fileID: 8796935212422184985, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: m_LocalPosition.z
