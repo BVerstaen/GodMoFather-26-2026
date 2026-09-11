@@ -130,12 +130,17 @@ public class ClientBehaviour : MonoBehaviour
                 transform.position = Vector2.Lerp(startPoint, targetPoint, t);
             }
             else if (IsEntry && time >= _fadeInDuration)
+            {
                 EndAnimation();
+                break;
+            }
 
 
             yield return null;
         }
-        EndAnimation();
+
+        if (!IsEntry)
+            EndAnimation();
 
         void EndAnimation()
         {
