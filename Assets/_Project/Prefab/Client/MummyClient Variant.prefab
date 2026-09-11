@@ -62,12 +62,24 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1f4d75dc02389ba42b236a9d73c9b9e8, type: 3}
     - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _fakeClientList.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: '_fakeClientList.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: a53d797cf4ebee84f955758c33b28d15, type: 2}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_fakeClientList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8daa9f855b3796349b3accacb53c9543, type: 2}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_fakeClientList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 59346de79d40a9942b31b2b5025f4818, type: 2}
+    - target: {fileID: 8643396384773758991, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
+      propertyPath: '_fakeClientList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f06fff5b2078d0a448fcbeaa36ccfd32, type: 2}
     - target: {fileID: 8654760675989654983, guid: 5995f45fa6b164a46975257b1f526cd2, type: 3}
       propertyPath: _validDialogs.Array.data[0].DialogsList.Array.size
       value: 3
