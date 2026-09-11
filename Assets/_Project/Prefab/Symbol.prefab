@@ -63,7 +63,7 @@ MonoBehaviour:
   _symbolAudio: {fileID: 0}
   _audioSource: {fileID: 1472459158682482556}
   _XGap: {x: -40, y: 40}
-  _YGap: {x: 120, y: 200}
+  _YGap: {x: 200, y: 600}
   _animDuration: 0.4
 --- !u!114 &2984103573577796881
 MonoBehaviour:
