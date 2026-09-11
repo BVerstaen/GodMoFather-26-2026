@@ -508,7 +508,7 @@ MonoBehaviour:
   _warningVignette: {fileID: 1339126224}
   _startPusleTime: 60
   _currentScore: 0
-  _GameTime: 70
+  _GameTime: 300
 --- !u!4 &106762602
 Transform:
   m_ObjectHideFlags: 0
